@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Step-by-Step Form</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <!-- <head>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Bootstrap" />
+                    </a>
+                </div>
+            </nav>
+        </head> -->
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center mb-5">
+                        <img src="images/logo.png" alt="Bootstrap" class="mb-3" />
+                        <h1>Employment Application Form</h1>
+                        <h3>Formulir Lamaran Kerja</h3>
+                    </div>
+                    <form id="myForm">
+                        <fieldset>
+                            <h4 class="mb-3">Personal Information</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="first_name" class="form-label">Nama Depan (First Name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="first_name"
+                                            id="first_name"
+                                            placeholder="Nama Depan (First Name)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="middle_name" class="form-label">Nama Tengah (Middle Name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="middle_name"
+                                            id="middle_name"
+                                            placeholder="Nama Tengah (Middle Name)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="last_name" class="form-label">Nama Belakang (Last Name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="last_name"
+                                            id="last_name"
+                                            placeholder="Nama Belakang (Last Name)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <br />
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
+                                            <label class="form-check-label" for="male">Laki-laki (Male)</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="female" value="2" />
+                                            <label class="form-check-label" for="female">Perempuan (Female)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="legal_identity_number" class="form-label">No. KTP (ID Number)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="legal_identity_number"
+                                            id="legal_identity_number"
+                                            placeholder="No. KTP (ID Number)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="tax_identify_number" class="form-label">No. NPWP (Tax ID Number)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="tax_identify_number"
+                                            id="tax_identify_number"
+                                            placeholder="No. NPWP (Tax ID Number)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="legal_address" class="form-label">Alamat KTP (ID address)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="legal_address"
+                                            id="legal_address"
+                                            rows="3"
+                                            placeholder="Alamat KTP (ID address)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="current_address" class="form-label">Alamat saat ini (Current Address)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="current_address"
+                                            id="current_address"
+                                            rows="3"
+                                            placeholder="Alamat saat ini (Current Address)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="home_phone_number" class="form-label">No. Handphone (Phone number)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="home_phone_number"
+                                            id="home_phone_number"
+                                            placeholder="No. Handphone (Phone number)"
+                                            required
+                                            maxlength="20"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="home_phone_number" class="form-label">No. Telepon Rumah (Home Phone Number)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="home_phone_number"
+                                            id="home_phone_number"
+                                            placeholder="No. Telepon Rumah (Home Phone Number)"
+                                            required
+                                            maxlength="20"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Alamat Email (Email Address)*</label>
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            name="email"
+                                            id="email"
+                                            placeholder="Alamat Email (Email Address)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth_place" class="form-label">Tempat Lahir(Place of Birth)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="birth_place"
+                                            id="birth_place"
+                                            placeholder="Tempat Lahir(Place of Birth)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth_date" class="form-label">Tanggal Lahir(Date of Birth)*</label>
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            name="birth_date"
+                                            id="birth_date"
+                                            placeholder="Tanggal Lahir(Date of Birth)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="marital_status_id" class="form-label">Status Pernikahan(Marital Status)*</label>
+                                        <select
+                                            class="form-select"
+                                            aria-label="marital_status_id"
+                                            name="marital_status_id"
+                                            id="marital_status_id"
+                                            required
+                                        >
+                                            <option selected>Select Status</option>
+                                            <option value="1" id="belum_menikah">Belum Menikah(Unmarried)</option>
+                                            <option value="2" id="menikah">Menikah (Married)</option>
+                                            <option value="3" id="cerai">Cerai (Divorce)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="religion_id" class="form-label">Agama (Religion)*</label>
+                                        <select class="form-select" aria-label="religion_id" name="religion_id" id="religion_id" required>
+                                            <option selected>Select Agama (Religion)</option>
+                                            <option value="1" id="islam">Islam</option>
+                                            <option value="2" id="kristen">Kristen</option>
+                                            <option value="3" id="katolik">Katolik</option>
+                                            <option value="4" id="budha">Budha</option>
+                                            <option value="4" id="konghucu">Konghucu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ethnic_id" class="form-label">Suku Bangsa (ethnic)*</label>
+                                        <select class="form-select" aria-label="ethnic_id" name="ethnic_id" id="ethnic_id" required>
+                                            <option selected>Select Suku Bangsa (ethnic)</option>
+                                            <option value="1" id="jawa">Jawa</option>
+                                            <option value="2" id="sunda">Sunda</option>
+                                            <option value="3" id="batak">Batak</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="weight" class="form-label">Berat Badan (Weight)*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="weight"
+                                            id="weight"
+                                            placeholder="Berat Badan (Weight)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="height" class="form-label">Tinggi Badan (Height)*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="height"
+                                            id="height"
+                                            placeholder="Tinggi Badan (Height)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
+                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="suami" id="suami">Suami</option>
+                                            <option value="istri" id="istri">Istri</option>
+                                            <option value="anak" id="anak">Anak</option>
+                                            <option value="orang-tua" id="orang-tua">Orang Tua</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="name"
+                                            id="name"
+                                            placeholder="Nama (name)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <br />
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
+                                            <label class="form-check-label" for="male">Laki-laki (Male)</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="female" value="2" />
+                                            <label class="form-check-label" for="female">Perempuan (Female)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="phone_number" class="form-label">No. Handphone (Phone number)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="phone_number"
+                                            id="phone_number"
+                                            placeholder="No. Handphone (Phone number)"
+                                            required
+                                            maxlength="20"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Alamat (Address)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="address"
+                                            id="address"
+                                            rows="3"
+                                            placeholder="Alamat (Address)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Data Keluarga (Family Information)</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
+                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="suami" id="suami">Suami</option>
+                                            <option value="istri" id="istri">Istri</option>
+                                            <option value="anak" id="anak">Anak</option>
+                                            <option value="orang-tua" id="orang-tua">Orang Tua</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="name"
+                                            id="name"
+                                            placeholder="Nama (name)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <br />
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
+                                            <label class="form-check-label" for="male">Laki-laki (Male)</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="female" value="2" />
+                                            <label class="form-check-label" for="female">Perempuan (Female)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth_place" class="form-label">Tempat Lahir(Place of Birth)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="birth_place"
+                                            id="birth_place"
+                                            placeholder="Tempat Lahir(Place of Birth)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth_date" class="form-label">Tanggal Lahir(Date of Birth)*</label>
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            name="birth_date"
+                                            id="birth_date"
+                                            placeholder="Tanggal Lahir(Date of Birth)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="education_id" class="form-label">Pendidikan (Education)*</label>
+                                        <select class="form-select" aria-label="education_id" name="education_id" id="education_id" required>
+                                            <option selected>Select Pendidikan (Education)</option>
+                                            <option value="1" id="SD">SD</option>
+                                            <option value="2" id="SMP">SMP</option>
+                                            <option value="3" id="SMA">SMA</option>
+                                            <option value="4" id="D3">D3</option>
+                                            <option value="4" id="S1">S1</option>
+                                            <option value="4" id="S2">S2</option>
+                                            <option value="4" id="S3">S3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="job_id" class="form-label">Pekerjaan (Occupation)*</label>
+                                        <select class="form-select" aria-label="job_id" name="job_id" id="job_id" required>
+                                            <option selected>Select Pendidikan (Occupation)</option>
+                                            <option value="1" id="PEGAWAI SWASTA">PEGAWAI SWASTA</option>
+                                            <option value="2" id="PNS">PNS</option>
+                                            <option value="3" id="PELAJAR">PELAJAR</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Identitas Orangtua & Saudara (Parents and Brothers/Sisters Information)</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
+                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="suami" id="suami">Suami</option>
+                                            <option value="istri" id="istri">Istri</option>
+                                            <option value="anak" id="anak">Anak</option>
+                                            <option value="orang-tua" id="orang-tua">Orang Tua</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="name"
+                                            id="name"
+                                            placeholder="Nama (name)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <br />
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
+                                            <label class="form-check-label" for="male">Laki-laki (Male)</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex_id" id="female" value="2" />
+                                            <label class="form-check-label" for="female">Perempuan (Female)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth_place" class="form-label">Tempat Lahir(Place of Birth)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="birth_place"
+                                            id="birth_place"
+                                            placeholder="Tempat Lahir(Place of Birth)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth_date" class="form-label">Tanggal Lahir(Date of Birth)*</label>
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            name="birth_date"
+                                            id="birth_date"
+                                            placeholder="Tanggal Lahir(Date of Birth)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="education_id" class="form-label">Pendidikan (Education)*</label>
+                                        <select class="form-select" aria-label="education_id" name="education_id" id="education_id" required>
+                                            <option selected>Select Pendidikan (Education)</option>
+                                            <option value="1" id="SD">SD</option>
+                                            <option value="2" id="SMP">SMP</option>
+                                            <option value="3" id="SMA">SMA</option>
+                                            <option value="4" id="D3">D3</option>
+                                            <option value="4" id="S1">S1</option>
+                                            <option value="4" id="S2">S2</option>
+                                            <option value="4" id="S3">S3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="job_id" class="form-label">Pekerjaan (Occupation)*</label>
+                                        <select class="form-select" aria-label="job_id" name="job_id" id="job_id" required>
+                                            <option selected>Select Pendidikan (Occupation)</option>
+                                            <option value="1" id="PEGAWAI SWASTA">PEGAWAI SWASTA</option>
+                                            <option value="2" id="PNS">PNS</option>
+                                            <option value="3" id="PELAJAR">PELAJAR</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Data Riwayat Pendidikan (Educational Background)</h4>
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="education_id" class="form-label">Jenjang (Academic Degree)*</label>
+                                        <select class="form-select" aria-label="education_id" name="education_id" id="education_id" required>
+                                            <option selected>Select Jenjang (Academic Degree)</option>
+                                            <option value="1" id="SD">SD</option>
+                                            <option value="2" id="SMP">SMP</option>
+                                            <option value="3" id="SMA">SMA</option>
+                                            <option value="4" id="D3">D3</option>
+                                            <option value="4" id="S1">S1</option>
+                                            <option value="4" id="S2">S2</option>
+                                            <option value="4" id="S3">S3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="institution_name" class="form-label">Nama Institusi (Institution Name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="institution_name"
+                                            id="institution_name"
+                                            placeholder="Institution Name (Institution Name)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="major" class="form-label">Jurusan (Departement)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="major"
+                                            id="major"
+                                            placeholder="Jurusan (Departement)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="started_year" class="form-label">Tahun Mulai(Started Year)*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="started_year"
+                                            id="started_year"
+                                            placeholder="Tahun Mulai(Started Year)"
+                                            required
+                                            maxlength="4"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="ended_year" class="form-label">Tahun Selesai(Ended Year)*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="ended_year"
+                                            id="ended_year"
+                                            placeholder="Tahun Selesai(Ended Year)"
+                                            required
+                                            maxlength="4"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="final_score" class="form-label">IPK (Final Score)*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="final_score"
+                                            id="final_score"
+                                            placeholder="IPK (Final Score)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Data Pengalaman Organisasi (Organization Experience)</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="organization_name" class="form-label">Nama Organisasi (Organization Name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="organization_name"
+                                            id="organization_name"
+                                            placeholder="Nama Organisasi (Organization Name)*"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="position" class="form-label">Jabatan (Position)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="position"
+                                            id="position"
+                                            placeholder="Jabatan (Position)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="year" class="form-label">Tahun*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="year"
+                                            id="year"
+                                            placeholder="Tahun(Year)"
+                                            required
+                                            maxlength="4"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Keterangan (Description)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="description"
+                                            id="description"
+                                            rows="3"
+                                            placeholder="Keterangan (Description)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Sertifikasi Keahlian/Profesi (Expertise/Profession Certification)</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="type_of_expertise" class="form-label">Jenis Keahlian (Type Of Expertise)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="type_of_expertise"
+                                            id="type_of_expertise"
+                                            placeholder="Jenis Keahlian (Type Of Expertise)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="qualification_type" class="form-label">Tipe Kualifikasi (Qualification Type)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="qualification_type"
+                                            id="qualification_type"
+                                            placeholder="Tipe Kualifikasi (Qualification Type)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="given_by" class="form-label">Pemberi Sertifikasi (Given By)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="given_by"
+                                            id="given_by"
+                                            placeholder="Pemberi Sertifikasi (Given By)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="year" class="form-label">Tahun*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="year"
+                                            id="year"
+                                            placeholder="Tahun(Year)"
+                                            required
+                                            maxlength="4"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Keterangan (Description)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="description"
+                                            id="description"
+                                            rows="3"
+                                            placeholder="Keterangan (Description)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Kursus/Pelatihan (Courses/Training)</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="type_of_training" class="form-label">Jenis (Type)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="type_of_training"
+                                            id="type_of_training"
+                                            placeholder="Jenis Keahlian (Type Of Expertise)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="level" class="form-label">Level*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="level"
+                                            id="level"
+                                            placeholder="level"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="organized_by" class="form-label">Penyelenggara (Organized by)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="organized_by"
+                                            id="organized_by"
+                                            placeholder="Penyelenggara (Organized by)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="year" class="form-label">Tahun*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="year"
+                                            id="year"
+                                            placeholder="Tahun(Year)"
+                                            required
+                                            maxlength="4"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Keterangan (Description)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="description"
+                                            id="description"
+                                            rows="3"
+                                            placeholder="Keterangan (Description)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Bahasa Asing (Foreign Language)</h4>
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="language" class="form-label">Bahasa (Language)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="language"
+                                            id="language"
+                                            placeholder="Bahasa (Language)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="speaking_ability_level" class="form-label">Kemampuan Berbicara (Speaking Ability)*</label>
+                                        <select
+                                            class="form-select"
+                                            aria-label="speaking_ability_level"
+                                            name="speaking_ability_level"
+                                            id="speaking_ability_level"
+                                            required
+                                        >
+                                            <option selected>Select Level</option>
+                                            <option value="Good" id="good">Baik (Good)</option>
+                                            <option value="Cukup" id="cukup">Cukup (Fair)</option>
+                                            <option value="Kurang" id="kurang">Kurang (Poor)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="writing_ability_level" class="form-label">Kemampuan Menulis (Writing Ability)*</label>
+                                        <select
+                                            class="form-select"
+                                            aria-label="speaking_ability_level"
+                                            name="writing_ability_level"
+                                            id="writing_ability_level"
+                                            required
+                                        >
+                                            <option selected>Select Level</option>
+                                            <option value="Good" id="good">Baik (Good)</option>
+                                            <option value="Cukup" id="cukup">Cukup (Fair)</option>
+                                            <option value="Kurang" id="kurang">Kurang (Poor)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Pengalaman Kerja (Work Experience)</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="company" class="form-label">Nama Perusahaan (Company)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="company"
+                                            id="company"
+                                            placeholder="Nama Perusahaan (Company)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="position" class="form-label">Jabatan (Position)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="position"
+                                            id="position"
+                                            placeholder="Position"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="from_date" class="form-label">Dari (From)*</label>
+                                        <input type="date" class="form-control" name="from_date" id="from_date" placeholder="Dari (From)" required />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="to_date" class="form-label">Sampai (To)*</label>
+                                        <input type="date" class="form-control" name="to_date" id="to_date" placeholder="Sampai (To)" required />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Tempat (Location)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="location"
+                                            id="location"
+                                            placeholder="Tempat (Location)"
+                                            required
+                                            maxlength="255"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="take_home_pay" class="form-label">Gaji terakhir (Take Home Pay/Net)*</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="take_home_pay"
+                                            id="take_home_pay"
+                                            placeholder="Gaji terakhir (Take Home Pay/Net)"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="job_description" class="form-label">Uraian Pekerjaan (Job Description)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="job_description"
+                                            id="job_description"
+                                            rows="3"
+                                            placeholder="Uraian Pekerjaan (Job Description)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="reason_for_resignation" class="form-label">Alasan Keluar (Reason for resignation)*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="reason_for_resignation"
+                                            id="reason_for_resignation"
+                                            rows="3"
+                                            placeholder="Alasan Keluar (Reason for resignation)"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">SAUDARA/TEMAN/KENALAN YANG BEKERJA PADA RUMAH SAKIT YARSI</h4>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
+                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="suami" id="suami">Suami</option>
+                                            <option value="istri" id="istri">Istri</option>
+                                            <option value="anak" id="anak">Anak</option>
+                                            <option value="orang-tua" id="orang-tua">Orang Tua</option>
+                                            <option value="Teman" id="teman">Teman</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="name"
+                                            id="name"
+                                            placeholder="Nama (name)"
+                                            required
+                                            maxlength="10"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="department_id" class="form-label">Bagian (Departement)*</label>
+                                        <select class="form-select" aria-label="department_id" name="department_id" id="department_id" required>
+                                            <option selected>Select Bagian (Departement)</option>
+                                            <option value="DEPARTMEN PELAYANAN MEDIS" id="DEPARTMEN PELAYANAN MEDIS">
+                                                DEPARTMEN PELAYANAN MEDIS
+                                            </option>
+                                            <option value="DEPARTMEN PENUNJANG MEDIS" id="DEPARTMEN PENUNJANG MEDIS">
+                                                DEPARTMEN PENUNJANG MEDIS
+                                            </option>
+                                            <option value="DEPARTMEN UMUM" id="DEPARTMEN UMUM">DEPARTMEN UMUM</option>
+                                            <option value="DEPARTMEN LEGAL & ADMINISTRASI" id="DEPARTMEN LEGAL & ADMINISTRASI">
+                                                DEPARTMEN LEGAL & ADMINISTRASI
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="position_id" class="form-label">Jabatan (Position)*</label>
+                                        <select class="form-select" aria-label="position_id" name="position_id" id="position_id" required>
+                                            <option selected>Select Bagian (Departement)</option>
+                                            <option value="DIREKTUR UTAMA" id="DIREKTUR UTAMA">DIREKTUR UTAMA</option>
+                                            <option value="DIREKTUR MEDIS" id="DIREKTUR MEDIS">DIREKTUR MEDIS</option>
+                                            <option value="DIREKTUR SDI" id="DIREKTUR SDI">DIREKTUR SDI</option>
+                                            <option value="KEPALA BAGIAN/KEPALA BIDANG" id="KEPALA BAGIAN/KEPALA BIDANG">
+                                                KEPALA BAGIAN/KEPALA BIDANG
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Data Perspektif Diri (Self Perspective)</h4>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="self_perspective" class="form-label"
+                                            >1. Ceritakan dengan singkat mengenai diri Anda menurut pandangan Anda pribadi?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="self_perspective"
+                                            id="self_perspective"
+                                            rows="3"
+                                            placeholder="Ceritakan dengan singkat mengenai diri Anda menurut pandangan Anda pribadi?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="strengths" class="form-label">2. Sebutkan minimal 3 (tiga) kelebihan yang Anda miliki?*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="strengths"
+                                            id="strengths"
+                                            rows="3"
+                                            placeholder="Sebutkan minimal 3 (tiga) kelebihan yang Anda miliki?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="weaknesses" class="form-label">3. Sebutkan minimal 3 (tiga) kekurangan yang Anda miliki?*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="weaknesses"
+                                            id="weaknesses"
+                                            rows="3"
+                                            placeholder="Sebutkan minimal 3 (tiga) kekurangan yang Anda miliki?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="successes" class="form-label"
+                                            >4. Sebutkan minimal 3 (tiga) keberhasilan yang pernah Anda raih dalam hidup?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="successes"
+                                            id="successes"
+                                            rows="3"
+                                            placeholder="Sebutkan minimal 3 (tiga) keberhasilan yang pernah Anda raih dalam hidup?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="failures" class="form-label"
+                                            >5. Sebutkan kegagalan-kegagalan yang pernah Anda alami dalam hidup?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="failures"
+                                            id="failures"
+                                            rows="3"
+                                            placeholder="Sebutkan kegagalan-kegagalan yang pernah Anda alami dalam hidup?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="career_overview" class="form-label"
+                                            >6. Berikan gambaran singkat mengenai karir / pekerjaan yang Anda inginkan?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="career_overview"
+                                            id="career_overview"
+                                            rows="3"
+                                            placeholder="Berikan gambaran singkat mengenai karir / pekerjaan yang Anda inginkan?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="future_expectations" class="form-label"
+                                            >7. Sebutkan harapan-harapan Anda di masa yang akan datang?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="future_expectations"
+                                            id="future_expectations"
+                                            rows="3"
+                                            placeholder="Sebutkan harapan-harapan Anda di masa yang akan datang?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">Data Tambahan (Additonal Information)</h4>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="physical_condition" class="form-label"
+                                            >1. Apakah Anda mengalami gangguan fisik (seperti; penglihatan, pendengaran, dll)? Jika ada, gambarkan
+                                            kondisi Anda saat ini dan sebutkan jenis pengobatan yang telah Anda lakukan?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="physical_condition"
+                                            id="physical_condition"
+                                            rows="3"
+                                            placeholder="Apakah Anda mengalami gangguan fisik (seperti; penglihatan, pendengaran, dll)? Jika ada, gambarkan kondisi Anda saat ini dan sebutkan jenis pengobatan yang telah Anda lakukan?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="severe_diseases" class="form-label"
+                                            >2. Apakah Anda pernah mengalami atau memiliki penyakit berat (seperti; jantung, diabetes, dll)? Jika iya,
+                                            sebutkan?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="severe_diseases"
+                                            id="severe_diseases"
+                                            rows="3"
+                                            placeholder="Apakah Anda pernah mengalami atau memiliki penyakit berat (seperti; jantung, diabetes, dll)? Jika iya, sebutkan?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="hospitalizations" class="form-label"
+                                            >3. Pernahkah Anda dirawat di Rumah Sakit? Jika pernah, sebutkan kapan waktunya serta apa
+                                            penyebabnya?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="hospitalizations"
+                                            id="hospitalizations"
+                                            rows="3"
+                                            placeholder="Pernahkah Anda dirawat di Rumah Sakit? Jika pernah, sebutkan kapan waktunya serta apa penyebabnya?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="last_medical_checkup" class="form-label"
+                                            >4. Kapan terakhir medical check up?, Apa Hasilnya?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="last_medical_checkup"
+                                            id="last_medical_checkup"
+                                            rows="3"
+                                            placeholder="Kapan terakhir medical check up?, Apa Hasilnya?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="mb-3">PERTANYAAN SDM (HUMAN RESOURCE’S TEST)</h4>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="first_name" class="form-label">Nama (Name)*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="first_name"
+                                            id="first_name"
+                                            placeholder="Nama (Name)"
+                                            required
+                                            maxlength="100"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="job_vacancy_id" class="form-label">Jabatan yang dilamar (Applied Position)*</label>
+                                        <select class="form-select" aria-label="job_vacancy_id" name="job_vacancy_id" id="job_vacancy_id" required>
+                                            <option selected>Select Jabatan yang dilamar</option>
+                                            <option value="1" id="JOB VACANCY 1">JOB VACANCY 1</option>
+                                            <option value="2" id="JOB VACANCY 2">JOB VACANCY 2</option>
+                                            <option value="3" id="JOB VACANCY 3">JOB VACANCY 3</option>
+                                            <option value="4" id="JOB VACANCY 4">JOB VACANCY 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="date" class="form-label">Tanggal Hari Ini(Today’s Date)*</label>
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            name="date"
+                                            id="date"
+                                            placeholder="Tanggal Hari Ini(Today’s Date)"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3 p-2">
+                                <div class="col-12 border border-2 p-2">
+                                    <p>Jawablah pertanyaan dibawah ini sesuai dengan keadaan anda dan dengan bahasa inggris (jika memungkinkan).</p>
+                                    <p>
+                                        Please, answer these following questions with accurate and best of your knowledge and answer with English (if
+                                        it’s possible)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <h5 class="mb-3">KOMITMEN DAN MOTIVASI (COMMITMENT AND MOTIVATION)</h5>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="source_of_info" class="form-label"
+                                            >A. Darimanakah anda mendapatkan informasi lowongan kerja Rumah Sakit YARSI?*
+                                        </label>
+                                        <textarea
+                                            class="form-control"
+                                            name="source_of_info"
+                                            id="source_of_info"
+                                            rows="3"
+                                            placeholder="Darimanakah anda mendapatkan informasi lowongan kerja Rumah Sakit YARSI?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="motivation" class="form-label">B. Mengapa anda ingin bekerja di Rumah Sakit YARSI?*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="motivation"
+                                            id="motivation"
+                                            rows="3"
+                                            placeholder="Mengapa anda ingin bekerja di Rumah Sakit YARSI?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="self_assessment" class="form-label"
+                                            >C. Apakah anda yakin dengan kemampuan anda sekarang dapat diterima bekerja di Rumah Sakit YARSI?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="self_assessment"
+                                            id="self_assessment"
+                                            rows="3"
+                                            placeholder="Apakah anda yakin dengan kemampuan anda sekarang dapat diterima bekerja di Rumah Sakit YARSI?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="desired_position" class="form-label"
+                                            >D. Jika anda diterima, posisi jabatan apa yang anda inginkan?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="desired_position"
+                                            id="desired_position"
+                                            rows="3"
+                                            placeholder="Jika anda diterima, posisi jabatan apa yang anda inginkan?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="coping_with_department_change" class="form-label"
+                                            >E. Apa yang anda lakukan, jika anda ditempatkan di jabatani yang bukan anda inginkan?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="coping_with_department_change"
+                                            id="coping_with_department_change"
+                                            rows="3"
+                                            placeholder="Apa yang anda lakukan, jika anda ditempatkan di jabatani yang bukan anda inginkan?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="previous_job_challenges" class="form-label"
+                                            >F. Kesulitan apa yang anda alami pada pekerjaan sebelumnya?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="previous_job_challenges"
+                                            id="previous_job_challenges"
+                                            rows="3"
+                                            placeholder="Kesulitan apa yang anda alami pada pekerjaan sebelumnya?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="reason_for_resignation" class="form-label"
+                                            >G. Mengapa anda mengundurkan diri dari pekerjaan sebelumnya?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="reason_for_resignation"
+                                            id="reason_for_resignation"
+                                            rows="3"
+                                            placeholder="Mengapa anda mengundurkan diri dari pekerjaan sebelumnya?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <h5 class="mb-3">PENANGANAN STRESS (STRESS HANDLING)</h5>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="conflict_management" class="form-label"
+                                            >A. Apa yang anda lakukan jika terjadi konflik dengan rekan kerja anda?*
+                                        </label>
+                                        <textarea
+                                            class="form-control"
+                                            name="conflict_management"
+                                            id="conflict_management"
+                                            rows="3"
+                                            placeholder="Apa yang anda lakukan jika terjadi konflik dengan rekan kerja anda?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="stress_management" class="form-label"
+                                            >B. Bagaimana Anda mengelola atau menangani stres di tempat kerja?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="stress_management"
+                                            id="stress_management"
+                                            rows="3"
+                                            placeholder="Bagaimana Anda mengelola atau menangani stres di tempat kerja?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="overtime_availability" class="form-label">C. Apakah Anda bersedia untuk bekerja lembur?*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="overtime_availability"
+                                            id="overtime_availability"
+                                            rows="3"
+                                            placeholder="Apakah Anda bersedia untuk bekerja lembur?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="handling_complaints" class="form-label"
+                                            >D. Apa yang akan Anda lakukan jika Anda mendapatkan keluhan dari pasien atau keluarga?*</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            name="handling_complaints"
+                                            id="handling_complaints"
+                                            rows="3"
+                                            placeholder="Apa yang akan Anda lakukan jika Anda mendapatkan keluhan dari pasien atau keluarga?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <h5 class="mb-3">Lain-Lain (Others)</h5>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="salary_expectation" class="form-label">A. Gaji yang diharapkan?* </label>
+                                        <textarea
+                                            class="form-control"
+                                            name="salary_expectation"
+                                            id="salary_expectation"
+                                            rows="3"
+                                            placeholder="Gaji yang diharapkan?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="benefits_facilities" class="form-label">B. Tunjangan / Fasilitas?*</label>
+                                        <textarea
+                                            class="form-control"
+                                            name="benefits_facilities"
+                                            id="benefits_facilities"
+                                            rows="3"
+                                            placeholder="Tunjangan / Fasilitas?"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Confirmation</legend>
+                            <p>Please review your information before submitting:</p>
+                            <ul>
+                                <li>Name: Andre<span id="namePreview"></span></li>
+                                <li>Email: andre@email.com<span id="emailPreview"></span></li>
+                                <li>Address: Bekasi<span id="addressPreview"></span></li>
+                                <li>City: Bekasi<span id="cityPreview"></span></li>
+                            </ul>
+                        </fieldset>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" id="prevBtn">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
