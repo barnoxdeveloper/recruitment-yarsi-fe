@@ -10,32 +10,40 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        /
+        <style>
+            fieldset {
+                display: none;
+            }
+            fieldset.active {
+                display: block;
+            }
+        </style>
     </head>
     <body>
-        <!-- <head>
-            <nav class="navbar bg-body-tertiary">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <img src="images/logo.png" alt="Bootstrap" />
-                    </a>
-                </div>
-            </nav>
-        </head> -->
         <div class="container mt-5">
-            <div class="card">
-                <div class="card-body">
-                    <div class="text-center mb-5">
-                        <img src="images/logo.png" alt="Bootstrap" class="mb-3" />
-                        <h1>Employment Application Form</h1>
-                        <h3>Formulir Lamaran Kerja</h3>
-                    </div>
-                    <form id="myForm">
-                        <fieldset>
-                            <h4 class="mb-3">Personal Information</h4>
+            <div class="text-center mb-4">
+                <img src="images/logo.png" alt="Bootstrap" class="mb-3" />
+                <h1 class="fs-4">FORMULIR APLIKASI CALON PEGAWAI RUMAH SAKIT YARSI</h1>
+                <h3 class="fs-5">(APLICATION FORM FOR CANDIDATE OF RUMAH SAKIT YARSI)</h3>
+                <hr />
+            </div>
+            <form id="multi-step-form">
+                <!-- Data Pribadi -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Data Pribadi</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Personal Information)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="first_name" class="form-label">Nama Depan (First Name)*</label>
+                                        <label for="first_name" class="form-label"
+                                            >Nama Depan
+                                            <span class="fst-italic">(First Name)</span>
+                                            *</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -49,7 +57,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="middle_name" class="form-label">Nama Tengah (Middle Name)*</label>
+                                        <label for="middle_name" class="form-label">Nama Tengah <span class="fst-italic">(Middle Name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -63,7 +71,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="last_name" class="form-label">Nama Belakang (Last Name)*</label>
+                                        <label for="last_name" class="form-label">Nama Belakang <span class="fst-italic">(Last Name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -77,21 +85,23 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <label for="last_name" class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                         <br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
-                                            <label class="form-check-label" for="male">Laki-laki (Male)</label>
+                                            <label class="form-check-label" for="male">Laki-laki <span class="fst-italic">(Male)</span></label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="sex_id" id="female" value="2" />
-                                            <label class="form-check-label" for="female">Perempuan (Female)</label>
+                                            <label class="form-check-label" for="female">Perempuan <span class="fst-italic">(Female)</span></label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="legal_identity_number" class="form-label">No. KTP (ID Number)*</label>
+                                        <label for="legal_identity_number" class="form-label"
+                                            >No. KTP <span class="fst-italic">(ID Number)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -105,7 +115,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="tax_identify_number" class="form-label">No. NPWP (Tax ID Number)*</label>
+                                        <label for="tax_identify_number" class="form-label"
+                                            >No. NPWP <span class="fst-italic">(Tax ID Number)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -119,7 +131,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="legal_address" class="form-label">Alamat KTP (ID address)*</label>
+                                        <label for="legal_address" class="form-label">Alamat KTP <span class="fst-italic">(ID address)</span>*</label>
                                         <textarea
                                             class="form-control"
                                             name="legal_address"
@@ -132,7 +144,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="current_address" class="form-label">Alamat saat ini (Current Address)*</label>
+                                        <label for="current_address" class="form-label"
+                                            >Alamat saat ini <span class="fst-italic">(Current Address)</span>*</label
+                                        >
                                         <textarea
                                             class="form-control"
                                             name="current_address"
@@ -145,7 +159,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="home_phone_number" class="form-label">No. Handphone (Phone number)*</label>
+                                        <label for="home_phone_number" class="form-label"
+                                            >No. Handphone <span class="fst-italic">(Phone number)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -159,7 +175,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="home_phone_number" class="form-label">No. Telepon Rumah (Home Phone Number)*</label>
+                                        <label for="home_phone_number" class="form-label"
+                                            >No. Telepon Rumah <span class="fst-italic">(Home Phone Number)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -173,7 +191,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="email" class="form-label">Alamat Email (Email Address)*</label>
+                                        <label for="email" class="form-label">Alamat Email <span class="fst-italic">(Email Address)</span>*</label>
                                         <input
                                             type="email"
                                             class="form-control"
@@ -187,7 +205,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="birth_place" class="form-label">Tempat Lahir(Place of Birth)*</label>
+                                        <label for="birth_place" class="form-label"
+                                            >Tempat Lahir <span class="fst-italic">(Place of Birth)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -201,7 +221,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="birth_date" class="form-label">Tanggal Lahir(Date of Birth)*</label>
+                                        <label for="birth_date" class="form-label"
+                                            >Tanggal Lahir <span class="fst-italic">(Date of Birth)</span>*</label
+                                        >
                                         <input
                                             type="date"
                                             class="form-control"
@@ -215,7 +237,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="marital_status_id" class="form-label">Status Pernikahan(Marital Status)*</label>
+                                        <label for="marital_status_id" class="form-label"
+                                            >Status Pernikahan <span class="fst-italic">(Marital Status)</span>*</label
+                                        >
                                         <select
                                             class="form-select"
                                             aria-label="marital_status_id"
@@ -223,7 +247,7 @@
                                             id="marital_status_id"
                                             required
                                         >
-                                            <option selected>Select Status</option>
+                                            <option value="">Select Status</option>
                                             <option value="1" id="belum_menikah">Belum Menikah(Unmarried)</option>
                                             <option value="2" id="menikah">Menikah (Married)</option>
                                             <option value="3" id="cerai">Cerai (Divorce)</option>
@@ -232,9 +256,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="religion_id" class="form-label">Agama (Religion)*</label>
+                                        <label for="religion_id" class="form-label">Agama <span class="fst-italic">(Religion)</span>*</label>
                                         <select class="form-select" aria-label="religion_id" name="religion_id" id="religion_id" required>
-                                            <option selected>Select Agama (Religion)</option>
+                                            <option value="">Select Agama (Religion)</option>
                                             <option value="1" id="islam">Islam</option>
                                             <option value="2" id="kristen">Kristen</option>
                                             <option value="3" id="katolik">Katolik</option>
@@ -245,9 +269,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="ethnic_id" class="form-label">Suku Bangsa (ethnic)*</label>
+                                        <label for="ethnic_id" class="form-label">Suku Bangsa <span class="fst-italic">(ethnic)</span>*</label>
                                         <select class="form-select" aria-label="ethnic_id" name="ethnic_id" id="ethnic_id" required>
-                                            <option selected>Select Suku Bangsa (ethnic)</option>
+                                            <option value="">Select Suku Bangsa (ethnic)</option>
                                             <option value="1" id="jawa">Jawa</option>
                                             <option value="2" id="sunda">Sunda</option>
                                             <option value="3" id="batak">Batak</option>
@@ -256,7 +280,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="weight" class="form-label">Berat Badan (Weight)*</label>
+                                        <label for="weight" class="form-label">Berat Badan <span class="fst-italic">(Weight)</span>*</label>
                                         <input
                                             type="number"
                                             class="form-control"
@@ -270,7 +294,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="height" class="form-label">Tinggi Badan (Height)*</label>
+                                        <label for="height" class="form-label">Tinggi Badan <span class="fst-italic">(Height)</span>*</label>
                                         <input
                                             type="number"
                                             class="form-control"
@@ -283,16 +307,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Family Member / Who can be Contacted In an Emergency)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <label for="relationship_id" class="form-label"
+                                            >Hubungan
+                                            <span class="fst-italic">(Relation)</span>
+                                            *</label
+                                        >
                                         <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
-                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="">Select Hubungan (Relation)</option>
                                             <option value="suami" id="suami">Suami</option>
                                             <option value="istri" id="istri">Istri</option>
                                             <option value="anak" id="anak">Anak</option>
@@ -302,7 +335,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <label for="name" class="form-label">Nama <span class="fst-italic">(Name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -316,7 +349,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <label for="last_name" class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                         <br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
@@ -330,13 +363,15 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="phone_number" class="form-label">No. Handphone (Phone number)*</label>
+                                        <label for="phone_number" class="form-label"
+                                            >No. Handphone <span class="fst-italic">(Phone Number)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
                                             name="phone_number"
                                             id="phone_number"
-                                            placeholder="No. Handphone (Phone number)"
+                                            placeholder="No. Handphone (Phone Number)"
                                             required
                                             maxlength="20"
                                         />
@@ -344,7 +379,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="address" class="form-label">Alamat (Address)*</label>
+                                        <label for="address" class="form-label">Alamat <span class="fst-italic">(Address)</span>*</label>
                                         <textarea
                                             class="form-control"
                                             name="address"
@@ -356,16 +391,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Data Keluarga (Family Information)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Data Keluarga -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Data Keluarga</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Family Information)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <label for="relationship_id" class="form-label">Hubungan <span class="fst-italic">(Relation)</span>*</label>
                                         <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
-                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="">Select Hubungan (Relation)</option>
                                             <option value="suami" id="suami">Suami</option>
                                             <option value="istri" id="istri">Istri</option>
                                             <option value="anak" id="anak">Anak</option>
@@ -375,7 +415,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <label for="name" class="form-label">Nama <span class="fst-italic">(Name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -389,7 +429,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <label for="last_name" class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                         <br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
@@ -403,7 +443,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="birth_place" class="form-label">Tempat Lahir(Place of Birth)*</label>
+                                        <label for="birth_place" class="form-label"
+                                            >Tempat Lahir <span class="fst-italic">(Place of Birth)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -417,7 +459,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="birth_date" class="form-label">Tanggal Lahir(Date of Birth)*</label>
+                                        <label for="birth_date" class="form-label"
+                                            >Tanggal Lahir <span class="fst-italic">(Date of Birth)</span>*</label
+                                        >
                                         <input
                                             type="date"
                                             class="form-control"
@@ -431,9 +475,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="education_id" class="form-label">Pendidikan (Education)*</label>
+                                        <label for="education_id" class="form-label">Pendidikan <span class="fst-italic">(Education)</span>*</label>
                                         <select class="form-select" aria-label="education_id" name="education_id" id="education_id" required>
-                                            <option selected>Select Pendidikan (Education)</option>
+                                            <option value="">Select Pendidikan (Education)</option>
                                             <option value="1" id="SD">SD</option>
                                             <option value="2" id="SMP">SMP</option>
                                             <option value="3" id="SMA">SMA</option>
@@ -446,9 +490,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="job_id" class="form-label">Pekerjaan (Occupation)*</label>
+                                        <label for="job_id" class="form-label">Pekerjaan <span class="fst-italic">(Occupation)</span>*</label>
                                         <select class="form-select" aria-label="job_id" name="job_id" id="job_id" required>
-                                            <option selected>Select Pendidikan (Occupation)</option>
+                                            <option value="">Select Pendidikan (Occupation)</option>
                                             <option value="1" id="PEGAWAI SWASTA">PEGAWAI SWASTA</option>
                                             <option value="2" id="PNS">PNS</option>
                                             <option value="3" id="PELAJAR">PELAJAR</option>
@@ -456,16 +500,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Identitas Orangtua & Saudara (Parents and Brothers/Sisters Information)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Identitas Orangtua & Saudara -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Identitas Orangtua & Saudara</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Parents and Brothers/Sisters Information)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <label for="relationship_id" class="form-label">Hubungan <span class="fst-italic">(Relation)</span>*</label>
                                         <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
-                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="">Select Hubungan (Relation)</option>
                                             <option value="suami" id="suami">Suami</option>
                                             <option value="istri" id="istri">Istri</option>
                                             <option value="anak" id="anak">Anak</option>
@@ -475,7 +524,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <label for="name" class="form-label">Nama <span class="fst-italic">(Name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -489,21 +538,23 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="last_name" class="form-label">Jenis Kelamin (Gender)*</label>
+                                        <label for="last_name" class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                         <br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="sex_id" id="male" value="1" />
-                                            <label class="form-check-label" for="male">Laki-laki (Male)</label>
+                                            <label class="form-check-label" for="male">Laki-laki <span class="fst-italic">(Male)</span></label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="sex_id" id="female" value="2" />
-                                            <label class="form-check-label" for="female">Perempuan (Female)</label>
+                                            <label class="form-check-label" for="female">Perempuan <span class="fst-italic">(Female)</span></label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="birth_place" class="form-label">Tempat Lahir(Place of Birth)*</label>
+                                        <label for="birth_place" class="form-label"
+                                            >Tempat Lahir <span class="fst-italic">(Place of Birth)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -517,7 +568,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="birth_date" class="form-label">Tanggal Lahir(Date of Birth)*</label>
+                                        <label for="birth_date" class="form-label"
+                                            >Tanggal Lahir <span class="fst-italic">(Date of Birth)</span>*</label
+                                        >
                                         <input
                                             type="date"
                                             class="form-control"
@@ -531,9 +584,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="education_id" class="form-label">Pendidikan (Education)*</label>
+                                        <label for="education_id" class="form-label">Pendidikan <span class="fst-italic">(Education)</span>*</label>
                                         <select class="form-select" aria-label="education_id" name="education_id" id="education_id" required>
-                                            <option selected>Select Pendidikan (Education)</option>
+                                            <option value="">Select Pendidikan (Education)</option>
                                             <option value="1" id="SD">SD</option>
                                             <option value="2" id="SMP">SMP</option>
                                             <option value="3" id="SMA">SMA</option>
@@ -546,9 +599,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="job_id" class="form-label">Pekerjaan (Occupation)*</label>
+                                        <label for="job_id" class="form-label">Pekerjaan <span class="fst-italic">(Occupation)</span>*</label>
                                         <select class="form-select" aria-label="job_id" name="job_id" id="job_id" required>
-                                            <option selected>Select Pendidikan (Occupation)</option>
+                                            <option value="">Select Pendidikan (Occupation)</option>
                                             <option value="1" id="PEGAWAI SWASTA">PEGAWAI SWASTA</option>
                                             <option value="2" id="PNS">PNS</option>
                                             <option value="3" id="PELAJAR">PELAJAR</option>
@@ -556,16 +609,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Data Riwayat Pendidikan (Educational Background)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Data Riwayat Pendidikan -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Data Riwayat Pendidikan</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Educational Background)</h4>
                             <div class="row g-3">
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="education_id" class="form-label">Jenjang (Academic Degree)*</label>
+                                        <label for="education_id" class="form-label"
+                                            >Jenjang <span class="fst-italic">(Academic Degree)</span>*</label
+                                        >
                                         <select class="form-select" aria-label="education_id" name="education_id" id="education_id" required>
-                                            <option selected>Select Jenjang (Academic Degree)</option>
+                                            <option value="">Select Jenjang (Academic Degree)</option>
                                             <option value="1" id="SD">SD</option>
                                             <option value="2" id="SMP">SMP</option>
                                             <option value="3" id="SMA">SMA</option>
@@ -578,7 +638,9 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="institution_name" class="form-label">Nama Institusi (Institution Name)*</label>
+                                        <label for="institution_name" class="form-label"
+                                            >Nama Institusi <span class="fst-italic">(Institution Name)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -592,7 +654,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="major" class="form-label">Jurusan (Departement)*</label>
+                                        <label for="major" class="form-label">Jurusan <span class="fst-italic">(Departement)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -606,7 +668,9 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="started_year" class="form-label">Tahun Mulai(Started Year)*</label>
+                                        <label for="started_year" class="form-label"
+                                            >Tahun Mulai <span class="fst-italic">(Started Year)</span>*</label
+                                        >
                                         <input
                                             type="number"
                                             class="form-control"
@@ -620,7 +684,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="ended_year" class="form-label">Tahun Selesai(Ended Year)*</label>
+                                        <label for="ended_year" class="form-label">Tahun Selesai <span class="fst-italic">(Ended Year)</span>*</label>
                                         <input
                                             type="number"
                                             class="form-control"
@@ -634,7 +698,9 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="final_score" class="form-label">IPK (Final Score)*</label>
+                                        <label for="final_score" class="form-label"
+                                            >Nilai Akhir / IPK <span class="fst-italic">(Final Score)</span>*</label
+                                        >
                                         <input
                                             type="number"
                                             class="form-control"
@@ -647,20 +713,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Data Pengalaman Organisasi (Organization Experience)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Data Pengalaman Organisasi -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Data Pengalaman Organisasi</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Organization Experience)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="organization_name" class="form-label">Nama Organisasi (Organization Name)*</label>
+                                        <label for="organization_name" class="form-label"
+                                            >Nama Organisasi <span class="fst-italic">(Organization Name)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
                                             name="organization_name"
                                             id="organization_name"
-                                            placeholder="Nama Organisasi (Organization Name)*"
+                                            placeholder="Nama Organisasi (Organization Name)"
                                             required
                                             maxlength="100"
                                         />
@@ -668,7 +741,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="position" class="form-label">Jabatan (Position)*</label>
+                                        <label for="position" class="form-label">Jabatan <span class="fst-italic">(Position)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -682,7 +755,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="year" class="form-label">Tahun*</label>
+                                        <label for="year" class="form-label">Tahun <span class="fst-italic">(Year)</span>*</label>
                                         <input
                                             type="number"
                                             class="form-control"
@@ -696,7 +769,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="description" class="form-label">Keterangan (Description)*</label>
+                                        <label for="description" class="form-label">Keterangan <span class="fst-italic">(Description)</span>*</label>
                                         <textarea
                                             class="form-control"
                                             name="description"
@@ -708,14 +781,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Sertifikasi Keahlian/Profesi (Expertise/Profession Certification)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Sertifikasi Keahlian/Profesi -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Sertifikasi Keahlian/Profesi</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Expertise/Profession Certification)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="type_of_expertise" class="form-label">Jenis Keahlian (Type Of Expertise)*</label>
+                                        <label for="type_of_expertise" class="form-label"
+                                            >Jenis Keahlian <span class="fst-italic">(Type Of Expertise)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -729,7 +809,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="qualification_type" class="form-label">Tipe Kualifikasi (Qualification Type)*</label>
+                                        <label for="qualification_type" class="form-label"
+                                            >Tipe Kualifikasi <span class="fst-italic">(Qualification Type)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -743,7 +825,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="given_by" class="form-label">Pemberi Sertifikasi (Given By)*</label>
+                                        <label for="given_by" class="form-label"
+                                            >Pemberi Sertifikasi <span class="fst-italic">(Given By)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -757,7 +841,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="year" class="form-label">Tahun*</label>
+                                        <label for="year" class="form-label">Tahun <span class="fst-italic">(Year)</span>*</label>
                                         <input
                                             type="number"
                                             class="form-control"
@@ -771,7 +855,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="description" class="form-label">Keterangan (Description)*</label>
+                                        <label for="description" class="form-label">Keterangan <span class="fst-italic">(Description)</span>*</label>
                                         <textarea
                                             class="form-control"
                                             name="description"
@@ -783,14 +867,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Kursus/Pelatihan (Courses/Training)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Kursus/Pelatihan -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Kursus/Pelatihan</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Courses/Training)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="type_of_training" class="form-label">Jenis (Type)*</label>
+                                        <label for="type_of_training" class="form-label">Jenis <span class="fst-italic">(Type)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -804,7 +893,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="level" class="form-label">Level*</label>
+                                        <label for="level" class="form-label">Level <span class="fst-italic">(Level)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -818,7 +907,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="organized_by" class="form-label">Penyelenggara (Organized by)*</label>
+                                        <label for="organized_by" class="form-label"
+                                            >Penyelenggara <span class="fst-italic">(Organized By)</span>*</label
+                                        >
                                         <input
                                             type="text"
                                             class="form-control"
@@ -832,7 +923,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="year" class="form-label">Tahun*</label>
+                                        <label for="year" class="form-label">Tahun <span class="fst-italic">(Year)</span>*</label>
                                         <input
                                             type="number"
                                             class="form-control"
@@ -846,7 +937,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="description" class="form-label">Keterangan (Description)*</label>
+                                        <label for="description" class="form-label">Keterangan <span class="fst-italic">(Description)</span>*</label>
                                         <textarea
                                             class="form-control"
                                             name="description"
@@ -858,14 +949,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Bahasa Asing (Foreign Language)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Bahasa Asing -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Bahasa Asing</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Foreign Language)</h4>
                             <div class="row g-3">
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="language" class="form-label">Bahasa (Language)*</label>
+                                        <label for="language" class="form-label">Bahasa <span class="fst-italic">(Language)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -879,7 +975,9 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="speaking_ability_level" class="form-label">Kemampuan Berbicara (Speaking Ability)*</label>
+                                        <label for="speaking_ability_level" class="form-label"
+                                            >Kemampuan Berbicara <span class="fst-italic">(Speaking Ability)</span>*</label
+                                        >
                                         <select
                                             class="form-select"
                                             aria-label="speaking_ability_level"
@@ -887,7 +985,7 @@
                                             id="speaking_ability_level"
                                             required
                                         >
-                                            <option selected>Select Level</option>
+                                            <option value="">Select Level</option>
                                             <option value="Good" id="good">Baik (Good)</option>
                                             <option value="Cukup" id="cukup">Cukup (Fair)</option>
                                             <option value="Kurang" id="kurang">Kurang (Poor)</option>
@@ -896,7 +994,9 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="writing_ability_level" class="form-label">Kemampuan Menulis (Writing Ability)*</label>
+                                        <label for="writing_ability_level" class="form-label"
+                                            >Kemampuan Menulis <span class="fst-italic">(Writing Ability)</span>*</label
+                                        >
                                         <select
                                             class="form-select"
                                             aria-label="speaking_ability_level"
@@ -904,7 +1004,7 @@
                                             id="writing_ability_level"
                                             required
                                         >
-                                            <option selected>Select Level</option>
+                                            <option value="">Select Level</option>
                                             <option value="Good" id="good">Baik (Good)</option>
                                             <option value="Cukup" id="cukup">Cukup (Fair)</option>
                                             <option value="Kurang" id="kurang">Kurang (Poor)</option>
@@ -912,14 +1012,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Pengalaman Kerja (Work Experience)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Pengalaman Kerja -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Pengalaman Kerja</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Work Experience)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="company" class="form-label">Nama Perusahaan (Company)*</label>
+                                        <label for="company" class="form-label">Nama Perusahaan <span class="fst-italic">(Company)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -933,7 +1038,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="position" class="form-label">Jabatan (Position)*</label>
+                                        <label for="position" class="form-label">Jabatan <span class="fst-italic">(Position)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -947,19 +1052,19 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="from_date" class="form-label">Dari (From)*</label>
+                                        <label for="from_date" class="form-label">Dari <span class="fst-italic">(From)</span>*</label>
                                         <input type="date" class="form-control" name="from_date" id="from_date" placeholder="Dari (From)" required />
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="to_date" class="form-label">Sampai (To)*</label>
+                                        <label for="to_date" class="form-label">Sampai <span class="fst-italic">(To)</span>*</label>
                                         <input type="date" class="form-control" name="to_date" id="to_date" placeholder="Sampai (To)" required />
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="location" class="form-label">Tempat (Location)*</label>
+                                        <label for="location" class="form-label">Tempat <span class="fst-italic">(Location)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -973,7 +1078,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="take_home_pay" class="form-label">Gaji terakhir (Take Home Pay/Net)*</label>
+                                        <label for="take_home_pay" class="form-label"
+                                            >Gaji terakhir <span class="fst-italic">(Take Home Pay/Net)</span>*</label
+                                        >
                                         <input
                                             type="number"
                                             class="form-control"
@@ -986,7 +1093,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="job_description" class="form-label">Uraian Pekerjaan (Job Description)*</label>
+                                        <label for="job_description" class="form-label"
+                                            >Uraian Pekerjaan <span class="fst-italic">(Job Description)</span>*</label
+                                        >
                                         <textarea
                                             class="form-control"
                                             name="job_description"
@@ -999,7 +1108,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="reason_for_resignation" class="form-label">Alasan Keluar (Reason for resignation)*</label>
+                                        <label for="reason_for_resignation" class="form-label"
+                                            >Alasan Keluar <span class="fst-italic">(Reason for resignation)</span>*</label
+                                        >
                                         <textarea
                                             class="form-control"
                                             name="reason_for_resignation"
@@ -1011,16 +1122,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">SAUDARA/TEMAN/KENALAN YANG BEKERJA PADA RUMAH SAKIT YARSI</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Saudara/Teman/Kenalan yang Bekerja Pada Rumah Sakit YARSI -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Saudara/Teman/Kenalan yang Bekerja Pada Rumah Sakit YARSI</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Relatives/Friends/Acquaintances Who Work At Rumah Sakit YARSI)</h4>
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="relationship_id" class="form-label">Hubungan (Relation)*</label>
+                                        <label for="relationship_id" class="form-label">Hubungan <span class="fst-italic">(Relation)</span>*</label>
                                         <select class="form-select" aria-label="relationship_id" name="relationship_id" id="relationship_id" required>
-                                            <option selected>Select Hubungan (Relation)</option>
+                                            <option value="">Select Hubungan (Relation)</option>
                                             <option value="suami" id="suami">Suami</option>
                                             <option value="istri" id="istri">Istri</option>
                                             <option value="anak" id="anak">Anak</option>
@@ -1031,7 +1147,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama (name)*</label>
+                                        <label for="name" class="form-label">Nama <span class="fst-italic">(name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -1045,9 +1161,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="department_id" class="form-label">Bagian (Departement)*</label>
+                                        <label for="department_id" class="form-label">Bagian <span class="fst-italic">(Departement)</span>*</label>
                                         <select class="form-select" aria-label="department_id" name="department_id" id="department_id" required>
-                                            <option selected>Select Bagian (Departement)</option>
+                                            <option value="">Select Bagian (Departement)</option>
                                             <option value="DEPARTMEN PELAYANAN MEDIS" id="DEPARTMEN PELAYANAN MEDIS">
                                                 DEPARTMEN PELAYANAN MEDIS
                                             </option>
@@ -1063,9 +1179,9 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="position_id" class="form-label">Jabatan (Position)*</label>
+                                        <label for="position_id" class="form-label">Jabatan <span class="fst-italic">(Position)</span>*</label>
                                         <select class="form-select" aria-label="position_id" name="position_id" id="position_id" required>
-                                            <option selected>Select Bagian (Departement)</option>
+                                            <option value="">Select Bagian (Departement)</option>
                                             <option value="DIREKTUR UTAMA" id="DIREKTUR UTAMA">DIREKTUR UTAMA</option>
                                             <option value="DIREKTUR MEDIS" id="DIREKTUR MEDIS">DIREKTUR MEDIS</option>
                                             <option value="DIREKTUR SDI" id="DIREKTUR SDI">DIREKTUR SDI</option>
@@ -1076,22 +1192,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Data Perspektif Diri (Self Perspective)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Data Perspektif Diri -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Data Perspektif Diri</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Self Perspective)</h4>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="self_perspective" class="form-label"
                                             >1. Ceritakan dengan singkat mengenai diri Anda menurut pandangan Anda pribadi?*</label
                                         >
+                                        <p class="text-muted fst-italic">(Tell us briefly about yourself according to Your perspective)</p>
                                         <textarea
                                             class="form-control"
                                             name="self_perspective"
                                             id="self_perspective"
                                             rows="3"
-                                            placeholder="Ceritakan dengan singkat mengenai diri Anda menurut pandangan Anda pribadi?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1099,27 +1221,15 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="strengths" class="form-label">2. Sebutkan minimal 3 (tiga) kelebihan yang Anda miliki?*</label>
-                                        <textarea
-                                            class="form-control"
-                                            name="strengths"
-                                            id="strengths"
-                                            rows="3"
-                                            placeholder="Sebutkan minimal 3 (tiga) kelebihan yang Anda miliki?"
-                                            required
-                                        ></textarea>
+                                        <p class="text-muted fst-italic">(Mention at least 3 (three) strength that you have?)</p>
+                                        <textarea class="form-control" name="strengths" id="strengths" rows="3" placeholder="" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="weaknesses" class="form-label">3. Sebutkan minimal 3 (tiga) kekurangan yang Anda miliki?*</label>
-                                        <textarea
-                                            class="form-control"
-                                            name="weaknesses"
-                                            id="weaknesses"
-                                            rows="3"
-                                            placeholder="Sebutkan minimal 3 (tiga) kekurangan yang Anda miliki?"
-                                            required
-                                        ></textarea>
+                                        <p class="text-muted fst-italic">(Mention at least 3 (three) weakness that you have?)</p>
+                                        <textarea class="form-control" name="weaknesses" id="weaknesses" rows="3" placeholder="" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -1127,14 +1237,8 @@
                                         <label for="successes" class="form-label"
                                             >4. Sebutkan minimal 3 (tiga) keberhasilan yang pernah Anda raih dalam hidup?*</label
                                         >
-                                        <textarea
-                                            class="form-control"
-                                            name="successes"
-                                            id="successes"
-                                            rows="3"
-                                            placeholder="Sebutkan minimal 3 (tiga) keberhasilan yang pernah Anda raih dalam hidup?"
-                                            required
-                                        ></textarea>
+                                        <p class="text-muted fst-italic">(Mentioned failure you have ever experienced in life?)</p>
+                                        <textarea class="form-control" name="successes" id="successes" rows="3" placeholder="" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -1142,14 +1246,8 @@
                                         <label for="failures" class="form-label"
                                             >5. Sebutkan kegagalan-kegagalan yang pernah Anda alami dalam hidup?*</label
                                         >
-                                        <textarea
-                                            class="form-control"
-                                            name="failures"
-                                            id="failures"
-                                            rows="3"
-                                            placeholder="Sebutkan kegagalan-kegagalan yang pernah Anda alami dalam hidup?"
-                                            required
-                                        ></textarea>
+                                        <p class="text-muted fst-italic">(Give a brief overview of the career / job you want?)</p>
+                                        <textarea class="form-control" name="failures" id="failures" rows="3" placeholder="" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -1157,12 +1255,13 @@
                                         <label for="career_overview" class="form-label"
                                             >6. Berikan gambaran singkat mengenai karir / pekerjaan yang Anda inginkan?*</label
                                         >
+                                        <p class="text-muted fst-italic">(Give a brief overview of the career / job you want?)</p>
                                         <textarea
                                             class="form-control"
                                             name="career_overview"
                                             id="career_overview"
                                             rows="3"
-                                            placeholder="Berikan gambaran singkat mengenai karir / pekerjaan yang Anda inginkan?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1172,21 +1271,27 @@
                                         <label for="future_expectations" class="form-label"
                                             >7. Sebutkan harapan-harapan Anda di masa yang akan datang?*</label
                                         >
+                                        <p class="text-muted fst-italic">(What are your expectations in the future?)</p>
                                         <textarea
                                             class="form-control"
                                             name="future_expectations"
                                             id="future_expectations"
                                             rows="3"
-                                            placeholder="Sebutkan harapan-harapan Anda di masa yang akan datang?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">Data Tambahan (Additonal Information)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Data Tambahan -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Data Tambahan</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Additonal Information)</h4>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="mb-3">
@@ -1194,12 +1299,16 @@
                                             >1. Apakah Anda mengalami gangguan fisik (seperti; penglihatan, pendengaran, dll)? Jika ada, gambarkan
                                             kondisi Anda saat ini dan sebutkan jenis pengobatan yang telah Anda lakukan?*</label
                                         >
+                                        <p class="text-muted fst-italic">
+                                            (Do you have a physical problem (such as; vision, hearing, etc.)? If no, describe your current conditions
+                                            and state the type of treatment you have done?)
+                                        </p>
                                         <textarea
                                             class="form-control"
                                             name="physical_condition"
                                             id="physical_condition"
                                             rows="3"
-                                            placeholder="Apakah Anda mengalami gangguan fisik (seperti; penglihatan, pendengaran, dll)? Jika ada, gambarkan kondisi Anda saat ini dan sebutkan jenis pengobatan yang telah Anda lakukan?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1210,12 +1319,16 @@
                                             >2. Apakah Anda pernah mengalami atau memiliki penyakit berat (seperti; jantung, diabetes, dll)? Jika iya,
                                             sebutkan?*</label
                                         >
+                                        <p class="text-muted fst-italic">
+                                            (Have You ever experienced or have severe disease (such as heart, diabetes, etc.)? If yes, please
+                                            specify?)
+                                        </p>
                                         <textarea
                                             class="form-control"
                                             name="severe_diseases"
                                             id="severe_diseases"
                                             rows="3"
-                                            placeholder="Apakah Anda pernah mengalami atau memiliki penyakit berat (seperti; jantung, diabetes, dll)? Jika iya, sebutkan?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1226,12 +1339,15 @@
                                             >3. Pernahkah Anda dirawat di Rumah Sakit? Jika pernah, sebutkan kapan waktunya serta apa
                                             penyebabnya?*</label
                                         >
+                                        <p class="text-muted fst-italic">
+                                            (Have 3. You ever been hospitalized? If yes,, mentioned when it's time and what is the cause?)
+                                        </p>
                                         <textarea
                                             class="form-control"
                                             name="hospitalizations"
                                             id="hospitalizations"
                                             rows="3"
-                                            placeholder="Pernahkah Anda dirawat di Rumah Sakit? Jika pernah, sebutkan kapan waktunya serta apa penyebabnya?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1241,25 +1357,33 @@
                                         <label for="last_medical_checkup" class="form-label"
                                             >4. Kapan terakhir medical check up?, Apa Hasilnya?*</label
                                         >
+                                        <p class="text-muted fst-italic">
+                                            (When was the last time you get medical check up?, What was checked?, What was the result)
+                                        </p>
                                         <textarea
                                             class="form-control"
                                             name="last_medical_checkup"
                                             id="last_medical_checkup"
                                             rows="3"
-                                            placeholder="Kapan terakhir medical check up?, Apa Hasilnya?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-                        <fieldset>
-                            <h4 class="mb-3">PERTANYAAN SDM (HUMAN RESOURCE’S TEST)</h4>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Pertanyaan SDM -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Pertanyaan SDM</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Human Resources Test)</h4>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="first_name" class="form-label">Nama (Name)*</label>
+                                        <label for="first_name" class="form-label">Nama <span class="fst-italic">(Name)</span>*</label>
                                         <input
                                             type="text"
                                             class="form-control"
@@ -1273,9 +1397,11 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="job_vacancy_id" class="form-label">Jabatan yang dilamar (Applied Position)*</label>
+                                        <label for="job_vacancy_id" class="form-label"
+                                            >Jabatan yang dilamar <span class="fst-italic">(Applied Position)</span>*</label
+                                        >
                                         <select class="form-select" aria-label="job_vacancy_id" name="job_vacancy_id" id="job_vacancy_id" required>
-                                            <option selected>Select Jabatan yang dilamar</option>
+                                            <option value="">Select Jabatan yang dilamar</option>
                                             <option value="1" id="JOB VACANCY 1">JOB VACANCY 1</option>
                                             <option value="2" id="JOB VACANCY 2">JOB VACANCY 2</option>
                                             <option value="3" id="JOB VACANCY 3">JOB VACANCY 3</option>
@@ -1285,7 +1411,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="date" class="form-label">Tanggal Hari Ini(Today’s Date)*</label>
+                                        <label for="date" class="form-label">Tanggal Hari Ini <span class="fst-italic">(Today’s Date)</span>*</label>
                                         <input
                                             type="date"
                                             class="form-control"
@@ -1297,28 +1423,35 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-3 mb-3 p-2">
-                                <div class="col-12 border border-2 p-2">
-                                    <p>Jawablah pertanyaan dibawah ini sesuai dengan keadaan anda dan dengan bahasa inggris (jika memungkinkan).</p>
-                                    <p>
-                                        Please, answer these following questions with accurate and best of your knowledge and answer with English (if
-                                        it’s possible)
-                                    </p>
-                                </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Komitmen Dan Motivasi -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="col-12 border border-2 p-2 mb-3">
+                                <p>Jawablah pertanyaan dibawah ini sesuai dengan keadaan anda dan dengan bahasa inggris (jika memungkinkan).</p>
+                                <p class="text-muted fst-italic">
+                                    Please, answer these following questions with accurate and best of your knowledge and answer with English (if it’s
+                                    possible)
+                                </p>
                             </div>
+                            <h3 class="fs-4">Komitmen Dan Motivasi</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Commitment and Motivation)</h4>
                             <div class="row g-3 mb-3">
-                                <h5 class="mb-3">KOMITMEN DAN MOTIVASI (COMMITMENT AND MOTIVATION)</h5>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="source_of_info" class="form-label"
                                             >A. Darimanakah anda mendapatkan informasi lowongan kerja Rumah Sakit YARSI?*
                                         </label>
+                                        <p class="text-muted fst-italic">(Where did you get information about YARSI Hospital?)</p>
                                         <textarea
                                             class="form-control"
                                             name="source_of_info"
                                             id="source_of_info"
                                             rows="3"
-                                            placeholder="Darimanakah anda mendapatkan informasi lowongan kerja Rumah Sakit YARSI?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1326,14 +1459,8 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="motivation" class="form-label">B. Mengapa anda ingin bekerja di Rumah Sakit YARSI?*</label>
-                                        <textarea
-                                            class="form-control"
-                                            name="motivation"
-                                            id="motivation"
-                                            rows="3"
-                                            placeholder="Mengapa anda ingin bekerja di Rumah Sakit YARSI?"
-                                            required
-                                        ></textarea>
+                                        <p class="text-muted fst-italic">(Why do you want to work in Yarsi Hospital?)</p>
+                                        <textarea class="form-control" name="motivation" id="motivation" rows="3" placeholder="" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -1341,12 +1468,13 @@
                                         <label for="self_assessment" class="form-label"
                                             >C. Apakah anda yakin dengan kemampuan anda sekarang dapat diterima bekerja di Rumah Sakit YARSI?*</label
                                         >
+                                        <p class="text-muted fst-italic">(Are you sure you have capability for working in YARSI Hospital?)</p>
                                         <textarea
                                             class="form-control"
                                             name="self_assessment"
                                             id="self_assessment"
                                             rows="3"
-                                            placeholder="Apakah anda yakin dengan kemampuan anda sekarang dapat diterima bekerja di Rumah Sakit YARSI?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1356,12 +1484,13 @@
                                         <label for="desired_position" class="form-label"
                                             >D. Jika anda diterima, posisi jabatan apa yang anda inginkan?*</label
                                         >
+                                        <p class="text-muted fst-italic">(If you are hired, what position do you want?)</p>
                                         <textarea
                                             class="form-control"
                                             name="desired_position"
                                             id="desired_position"
                                             rows="3"
-                                            placeholder="Jika anda diterima, posisi jabatan apa yang anda inginkan?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1371,12 +1500,15 @@
                                         <label for="coping_with_department_change" class="form-label"
                                             >E. Apa yang anda lakukan, jika anda ditempatkan di jabatani yang bukan anda inginkan?*</label
                                         >
+                                        <p class="text-muted fst-italic">
+                                            (What will you do, if you are placed or rotated to other department that you don’t really like?)
+                                        </p>
                                         <textarea
                                             class="form-control"
                                             name="coping_with_department_change"
                                             id="coping_with_department_change"
                                             rows="3"
-                                            placeholder="Apa yang anda lakukan, jika anda ditempatkan di jabatani yang bukan anda inginkan?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1386,12 +1518,15 @@
                                         <label for="previous_job_challenges" class="form-label"
                                             >F. Kesulitan apa yang anda alami pada pekerjaan sebelumnya?*</label
                                         >
+                                        <p class="text-muted fst-italic">
+                                            (What kind of difficulties that you experienced during your previous job?)
+                                        </p>
                                         <textarea
                                             class="form-control"
                                             name="previous_job_challenges"
                                             id="previous_job_challenges"
                                             rows="3"
-                                            placeholder="Kesulitan apa yang anda alami pada pekerjaan sebelumnya?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1401,30 +1536,40 @@
                                         <label for="reason_for_resignation" class="form-label"
                                             >G. Mengapa anda mengundurkan diri dari pekerjaan sebelumnya?*</label
                                         >
+                                        <p class="text-muted fst-italic">(Why did you resign from your previous job?)</p>
                                         <textarea
                                             class="form-control"
                                             name="reason_for_resignation"
                                             id="reason_for_resignation"
                                             rows="3"
-                                            placeholder="Mengapa anda mengundurkan diri dari pekerjaan sebelumnya?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Penangan Stress -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Penangan Stress</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Stress Handling)</h4>
                             <div class="row g-3 mb-3">
-                                <h5 class="mb-3">PENANGANAN STRESS (STRESS HANDLING)</h5>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="conflict_management" class="form-label"
                                             >A. Apa yang anda lakukan jika terjadi konflik dengan rekan kerja anda?*
                                         </label>
+                                        <p class="text-muted fst-italic">(What will you do if you have a conflict with your co-workers?)</p>
                                         <textarea
                                             class="form-control"
                                             name="conflict_management"
                                             id="conflict_management"
                                             rows="3"
-                                            placeholder="Apa yang anda lakukan jika terjadi konflik dengan rekan kerja anda?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1434,12 +1579,13 @@
                                         <label for="stress_management" class="form-label"
                                             >B. Bagaimana Anda mengelola atau menangani stres di tempat kerja?*</label
                                         >
+                                        <p class="text-muted fst-italic">(How do you manage or handle stress at work?)</p>
                                         <textarea
                                             class="form-control"
                                             name="stress_management"
                                             id="stress_management"
                                             rows="3"
-                                            placeholder="Bagaimana Anda mengelola atau menangani stres di tempat kerja?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1447,12 +1593,13 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="overtime_availability" class="form-label">C. Apakah Anda bersedia untuk bekerja lembur?*</label>
+                                        <p class="text-muted fst-italic">(Are you willing to work overtime?)</p>
                                         <textarea
                                             class="form-control"
                                             name="overtime_availability"
                                             id="overtime_availability"
                                             rows="3"
-                                            placeholder="Apakah Anda bersedia untuk bekerja lembur?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
@@ -1462,50 +1609,64 @@
                                         <label for="handling_complaints" class="form-label"
                                             >D. Apa yang akan Anda lakukan jika Anda mendapatkan keluhan dari pasien atau keluarga?*</label
                                         >
+                                        <p class="text-muted fst-italic">(What will you do if you get complaint from patients or relatives?)</p>
                                         <textarea
                                             class="form-control"
                                             name="handling_complaints"
                                             id="handling_complaints"
                                             rows="3"
-                                            placeholder="Apa yang akan Anda lakukan jika Anda mendapatkan keluhan dari pasien atau keluarga?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Lain-lain -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-4">Lain-lain</h3>
+                            <h4 class="fs-5 mb-3 fst-italic">(Others)</h4>
                             <div class="row g-3 mb-3">
-                                <h5 class="mb-3">Lain-Lain (Others)</h5>
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="salary_expectation" class="form-label">A. Gaji yang diharapkan?* </label>
-                                        <textarea
+                                        <label for="salary_expectation" class="form-label">A. Gaji yang diharapkan?*</label>
+                                        <p class="text-muted fst-italic">(Expected Salary)</p>
+                                        <input
+                                            type="number"
                                             class="form-control"
                                             name="salary_expectation"
                                             id="salary_expectation"
-                                            rows="3"
-                                            placeholder="Gaji yang diharapkan?"
+                                            placeholder=""
                                             required
-                                        ></textarea>
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="benefits_facilities" class="form-label">B. Tunjangan / Fasilitas?*</label>
+                                        <p class="text-muted fst-italic">(Benefits / Facilities)</p>
                                         <textarea
                                             class="form-control"
                                             name="benefits_facilities"
                                             id="benefits_facilities"
                                             rows="3"
-                                            placeholder="Tunjangan / Fasilitas?"
+                                            placeholder=""
                                             required
                                         ></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </fieldset>
-
-                        <fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Confirmation -->
+                <fieldset>
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <legend>Confirmation</legend>
                             <p>Please review your information before submitting:</p>
                             <ul>
@@ -1514,15 +1675,33 @@
                                 <li>Address: Bekasi<span id="addressPreview"></span></li>
                                 <li>City: Bekasi<span id="cityPreview"></span></li>
                             </ul>
-                        </fieldset>
-
-                        <div class="d-flex justify-content-between">
-                            <button type="button" class="btn btn-secondary" id="prevBtn">Previous</button>
-                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
                         </div>
-                    </form>
+                    </div>
+                </fieldset>
+                <div class="g-recaptcha mb-3" data-sitekey="your_site_key"></div>
+                <div class="d-flex justify-content-end mb-5">
+                    <div class="navigation-buttons mt-3">
+                        <button type="button" class="btn btn-danger prev-step">
+                            Previous
+                            <i class="bi bi-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-success next-step">
+                            Next
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <button
+                            type="submit"
+                            data-sitekey="6Lfm1OopAAAAAMn7VU9TV8-1lkmi_DTtyfIi6KKC"
+                            data-callback="onSubmit"
+                            data-action="submit"
+                            class="btn btn-primary submit-button"
+                        >
+                            Submit
+                            <i class="bi bi-send-check"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <script
@@ -1536,5 +1715,69 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            $(document).ready(function () {
+                var currentStep = 0;
+                var steps = $("fieldset");
+                var $prevButton = $(".prev-step");
+                var $nextButton = $(".next-step");
+                var $submitButton = $(".submit-button");
+
+                function showStep(step) {
+                    steps.removeClass("active");
+                    steps.eq(step).addClass("active");
+
+                    $prevButton.toggle(step > 0);
+                    $nextButton.toggle(step < steps.length - 1);
+                    $submitButton.toggle(step === steps.length - 1);
+                }
+
+                function validateStep(step) {
+                    var inputs = steps.eq(step).find(":input[required]");
+                    var isValid = true;
+                    inputs.each(function () {
+                        if (!this.checkValidity()) {
+                            isValid = false;
+                            $(this).addClass("is-invalid");
+                        } else {
+                            $(this).removeClass("is-invalid");
+                        }
+                    });
+                    return isValid;
+                }
+
+                $nextButton.click(function () {
+                    if (validateStep(currentStep) && currentStep < steps.length - 1) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                });
+
+                $prevButton.click(function () {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
+                });
+
+                $("#multi-step-form").submit(function (e) {
+                    if (!validateStep(currentStep)) {
+                        e.preventDefault();
+                    } else if (grecaptcha.getResponse() === "") {
+                        e.preventDefault();
+                        alert("Please complete the CAPTCHA.");
+                    } else {
+                        alert("Form submitted!");
+                    }
+                });
+
+                showStep(currentStep);
+
+                function onSubmit(token) {
+                    document.getElementById("demo-form").submit();
+                }
+            });
+        </script>
     </body>
 </html>
