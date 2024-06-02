@@ -23,7 +23,7 @@
         <div class="container mt-5">
             <form id="multi-step-form">
                 <!-- Data Pribadi -->
-                <fieldset>
+                <fieldset id="personal_information">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h3 class="fs-4">Data Pribadi</h3>
@@ -65,7 +65,8 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset>
+
+                <fieldset id="family_members">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h3 class="fs-4">Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat</h3>
@@ -73,9 +74,7 @@
                             <div class="row g-3">
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
-                                        <label for="relationship_id" class="form-label">
-                                            Hubungan <span class="fst-italic">(Relation)</span>*</label
-                                        >
+                                        <label for="relationship_id" class="form-label"> Hubungan <span class="fst-italic">(Relation)</span>*</label>
                                         <select
                                             class="form-select"
                                             aria-label="relationship_id"
@@ -91,31 +90,26 @@
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">
+                                        <label for="name-emergency-contact-candidates" class="form-label">
                                             Nama <span class="fst-italic">(Name)</span>*</label
                                         >
                                         <input
                                             type="text"
                                             class="form-control"
-                                            name="name"
+                                            name="name_family_member"
                                             id="name-emergency-contact-candidates"
                                             placeholder="Nama (Name)"
-                                            required
                                             maxlength="100"
+                                            required
                                         />
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mb-5">
-                                <button type="button" class="btn btn-success" id="btn-save-emergency-contact">
-                                    Add Family
-                                </button>
+                                <button type="button" class="btn btn-success" id="btn-save-emergency-contact">Add Family</button>
                             </div>
                             <div class="table-responsive">
-                                <table
-                                    class="table table-striped table-bordered"
-                                    id="table-emergency-contact-candidates"
-                                >
+                                <table class="table table-striped table-bordered" id="table-emergency-contact-candidates">
                                     <thead class="text-center">
                                         <tr>
                                             <th>Hubungan</th>
@@ -128,72 +122,35 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="organization">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h3 class="fs-4">Data Riwayat Pendidikan</h3>
-                            <h4 class="fs-5 mb-4 fst-italic">(Educational Background)</h4>
+                            <h3 class="fs-4">Organisasi</h3>
+                            <h4 class="fs-5 mb-4 fst-italic">(Organization)</h4>
                             <div class="row g-3">
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
-                                        <label for="education-id-education-background-candidates" class="form-label"
-                                            >Jenjang <span class="fst-italic">(Academic Degree)</span>*</label
-                                        >
-                                        <select
-                                            class="form-select"
-                                            aria-label="education-id-education-background-candidates"
-                                            name="education_id"
-                                            id="education-id-education-background-candidates"
+                                        <label for="name-organization" class="form-label"> Name*</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="name_organization"
+                                            id="name-organization"
+                                            maxlength="100"
                                             required
-                                        >
-                                            <option value="">Select Jenjang (Academic Degree)</option>
-                                            <option value="1" id="SD">SD</option>
-                                            <option value="2" id="SMP">SMP</option>
-                                            <option value="3" id="SMA">SMA</option>
-                                            <option value="4" id="D3">D3</option>
-                                            <option value="4" id="S1">S1</option>
-                                            <option value="4" id="S2">S2</option>
-                                            <option value="4" id="S3">S3</option>
-                                        </select>
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
-                                        <label for="institution-name-education-background-candidates" class="form-label"
-                                            >Nama Institusi <span class="fst-italic">(Institution Name)</span>*</label
-                                        >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            name="institution_name"
-                                            id="institution-name-education-background-candidates"
-                                            placeholder="Institution Name (Institution Name)"
-                                            required
-                                            maxlength="100"
-                                        />
+                                        <label for="last-name-candidate" class="form-label"> Location*</label>
+                                        <input type="text" class="form-control" name="location" id="location-organization" maxlength="100" required />
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-center mb-5">
-                                <button type="button" class="btn btn-success" id="btn-save-education-background">
-                                    Add Education
-                                </button>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered" id="table-education-background">
-                                    <thead class="text-center">
-                                        <tr>
-                                            <th>Jenjang</th>
-                                            <th>Nama Institusi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-center"></tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
                 </fieldset>
-
                 <div class="d-flex justify-content-center mb-5">
                     <div class="navigation-buttons mt-3">
                         <button type="button" class="btn btn-danger prev-step">
@@ -232,11 +189,11 @@
         ></script>
         <script>
             $(document).ready(function () {
-                var currentStep = 0;
-                var steps = $("fieldset");
-                var $prevButton = $(".prev-step");
-                var $nextButton = $(".next-step");
-                var $submitButton = $(".submit-button");
+                let currentStep = 0;
+                let steps = $("fieldset");
+                let $prevButton = $(".prev-step");
+                let $nextButton = $(".next-step");
+                let $submitButton = $(".submit-button");
 
                 function showStep(step) {
                     steps.removeClass("active");
@@ -248,8 +205,8 @@
                 }
 
                 function validateStep(step) {
-                    var inputs = steps.eq(step).find(":input[required]");
-                    var isValid = true;
+                    let inputs = steps.eq(step).find(":input[required]");
+                    let isValid = true;
                     inputs.each(function () {
                         if (!this.checkValidity()) {
                             isValid = false;
@@ -262,18 +219,24 @@
                 }
 
                 function saveStepData(step) {
-                    var inputs = steps.eq(step).find(":input");
-                    var stepData = {};
-                    inputs.each(function () {
-                        stepData[this.name] = $(this).val();
-                    });
-                    store.set("step_" + step, stepData);
+                    let fieldsetID = steps.eq(step).attr("id");
+                    if (fieldsetID === "family_members") {
+                        saveFamilyMembers();
+                    } else {
+                        let inputs = steps.eq(step).find(":input");
+                        let stepData = {};
+                        inputs.each(function () {
+                            stepData[this.name] = $(this).val();
+                        });
+                        store.set(fieldsetID, stepData);
+                    }
                 }
 
                 function loadStepData(step) {
-                    var stepData = store.get("step_" + step);
+                    let fieldsetID = steps.eq(step).attr("id");
+                    let stepData = store.get(fieldsetID);
                     if (stepData) {
-                        var inputs = steps.eq(step).find(":input");
+                        let inputs = steps.eq(step).find(":input");
                         inputs.each(function () {
                             $(this).val(stepData[this.name]);
                         });
@@ -282,21 +245,30 @@
 
                 // family member start
                 function saveFamilyMembers() {
-                    var familyMembers = store.get("family_members") || [];
-                    var relationship = $("#relationship-id-emergency-contact-candidates").val();
-                    var name = $("#name-emergency-contact-candidates").val();
-                    familyMembers.push({ relationship: relationship, name: name });
+                    let familyMembers = store.get("family_members") || []; // Default to empty array if not set
+                    let relationship = $("#relationship-id-emergency-contact-candidates").val();
+                    let name = $("#name-emergency-contact-candidates").val();
+
+                    // Check if both relationship and name have values before pushing
+                    if (relationship && name) {
+                        familyMembers.push({ relationship: relationship, name: name });
+                    }
+
                     store.set("family_members", familyMembers);
+                    $("#relationship-id-emergency-contact-candidates").prop("required", false);
+                    $("#name-emergency-contact-candidates").prop("required", false);
                     renderFamilyMembersTable();
                 }
+
                 function renderFamilyMembersTable() {
-                    var familyMembers = store.get("family_members") || [];
-                    var $tableBody = $("#table-emergency-contact-candidates tbody");
+                    let familyMembers = store.get("family_members") || [];
+                    let $tableBody = $("#table-emergency-contact-candidates tbody");
                     $tableBody.empty();
                     familyMembers.forEach(function (member) {
                         $tableBody.append("<tr><td>" + member.relationship + "</td><td>" + member.name + "</td></tr>");
                     });
                 }
+
                 $("#btn-save-emergency-contact").click(function () {
                     if (validateStep(currentStep)) {
                         saveFamilyMembers();
@@ -306,44 +278,25 @@
                 });
                 // family member end
 
-                // education background
-                function saveEducationBackground() {
-                    var educationBackground = store.get("education_backgrounds") || [];
-                    var educationId = $("#education-id-education-background-candidates").val();
-                    var institutionName = $("#institution-name-education-background-candidates").val();
-                    educationBackground.push({ education_id: educationId, name: institutionName });
-                    store.set("education_backgrounds", educationBackground);
-                    renderEducationBackgroundTables();
-                }
-                function renderEducationBackgroundTables() {
-                    var educationBackground = store.get("education_backgrounds") || [];
-                    var $tableBody = $("#table-education-background tbody");
-                    $tableBody.empty();
-                    educationBackground.forEach(function (member) {
-                        $tableBody.append("<tr><td>" + member.education_id + "</td><td>" + member.name + "</td></tr>");
-                    });
-                }
-                $("#btn-save-education-background").click(function () {
-                    if (validateStep(currentStep)) {
-                        saveEducationBackground();
-                        $("#education-id-education-background-candidates").val("");
-                        $("#institution-name-education-background-candidates").val("");
-                    }
-                });
-                // family member end
-
                 $nextButton.click(function () {
-                    if (validateStep(currentStep) && currentStep < steps.length - 1) {
-                        saveStepData(currentStep);
+                    const currentFieldset = steps.eq(currentStep);
+                    const fieldsetID = currentFieldset.attr("id");
+                    if (store.get(fieldsetID) !== undefined) {
                         currentStep++;
                         loadStepData(currentStep);
                         showStep(currentStep);
+                    } else {
+                        if (validateStep(currentStep) && currentStep < steps.length - 1) {
+                            saveStepData(currentStep);
+                            currentStep++;
+                            loadStepData(currentStep);
+                            showStep(currentStep);
+                        }
                     }
                 });
 
                 $prevButton.click(function () {
                     if (currentStep > 0) {
-                        saveStepData(currentStep); // Save current step before moving back
                         currentStep--;
                         loadStepData(currentStep);
                         showStep(currentStep);
@@ -351,10 +304,12 @@
                 });
 
                 $("#multi-step-form").submit(function (e) {
+                    console.info("clicked");
                     if (!validateStep(currentStep)) {
                         e.preventDefault();
                     } else {
                         saveStepData(currentStep);
+                        store.clearAll();
                         alert("Form submitted!");
                     }
                 });
@@ -362,7 +317,6 @@
                 showStep(currentStep);
                 loadStepData(currentStep);
                 renderFamilyMembersTable();
-                renderEducationBackgroundTables();
 
                 function onSubmit(token) {
                     document.getElementById("multi-step-form").submit();

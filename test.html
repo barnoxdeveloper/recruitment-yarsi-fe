@@ -1,0 +1,173 @@
+<form id="multi-step-form">
+    <!-- Data Pribadi -->
+    <fieldset id="personal_information">
+        <input type="text" name="first_name" id="first-name-candidate" maxlength="100" required />
+        <input type="text" name="last_name" id="last-name-candidate" required maxlength="100" />
+    </fieldset>
+    <fieldset id="family_members">
+        <select name="relationship_id" id="relationship-id-emergency-contact-candidates">
+            <option value="">Select Hubungan (Relation)</option>
+            <option value="suami" id="suami">Suami</option>
+            <option value="istri" id="istri">Istri</option>
+        </select>
+        <input type="text" name="name" id="name-emergency-contact-candidates" maxlength="100" />
+        <button type="button" id="btn-save-emergency-contact">Add Family</button>
+        <br />
+        <table id="table-emergency-contact-candidates">
+            <thead>
+                <tr>
+                    <th>Hubungan</th>
+                    <th>Nama</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </fieldset>
+    <fieldset id="organization">
+        <input type="text" name="name" id="name-organization" maxlength="100" required />
+        <input type="text" name="location" id="location-organization" maxlength="100" required />
+    </fieldset>
+
+    <div>
+        <button type="button" class="prev-step">Previous</button>
+        <button type="button" class="next-step">Next</button>
+        <button type="submit" class="submit-button">Submit</button>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        let currentStep = 0;
+        let steps = $("fieldset");
+        let $prevButton = $(".prev-step");
+        let $nextButton = $(".next-step");
+        let $submitButton = $(".submit-button");
+
+        function showStep(step) {
+            steps.removeClass("active");
+            steps.eq(step).addClass("active");
+
+            $prevButton.toggle(step > 0);
+            $nextButton.toggle(step < steps.length - 1);
+            $submitButton.toggle(step === steps.length - 1);
+        }
+
+        function validateStep(step) {
+            let inputs = steps.eq(step).find(":input[required]");
+            let isValid = true;
+            inputs.each(function () {
+                if (!this.checkValidity()) {
+                    isValid = false;
+                    $(this).addClass("is-invalid");
+                } else {
+                    $(this).removeClass("is-invalid");
+                }
+            });
+            return isValid;
+        }
+
+        function saveStepData(step) {
+            let fieldsetID = steps.eq(step).attr("id");
+            if (fieldsetID === "family_members") {
+                saveFamilyMembers();
+            } else {
+                let inputs = steps.eq(step).find(":input");
+                let stepData = {};
+                inputs.each(function () {
+                    stepData[this.name] = $(this).val();
+                });
+                store.set(fieldsetID, stepData);
+            }
+        }
+
+        function loadStepData(step) {
+            let fieldsetID = steps.eq(step).attr("id");
+            let stepData = store.get(fieldsetID);
+            if (stepData) {
+                let inputs = steps.eq(step).find(":input");
+                inputs.each(function () {
+                    $(this).val(stepData[this.name]);
+                });
+            }
+        }
+
+        // family member start
+        function saveFamilyMembers() {
+            let familyMembers = store.get("family_members") || []; // Default to empty array if not set
+            let relationship = $("#relationship-id-emergency-contact-candidates").val();
+            let name = $("#name-emergency-contact-candidates").val();
+
+            // Check if both relationship and name have values before pushing
+            if (relationship && name) {
+                familyMembers.push({ relationship: relationship, name: name });
+            }
+
+            store.set("family_members", familyMembers);
+            $("#relationship-id-emergency-contact-candidates").prop("required", false);
+            $("#name-emergency-contact-candidates").prop("required", false);
+            renderFamilyMembersTable();
+        }
+
+        function renderFamilyMembersTable() {
+            let familyMembers = store.get("family_members") || [];
+            let $tableBody = $("#table-emergency-contact-candidates tbody");
+            $tableBody.empty();
+            familyMembers.forEach(function (member) {
+                $tableBody.append("<tr><td>" + member.relationship + "</td><td>" + member.name + "</td></tr>");
+            });
+        }
+
+        $("#btn-save-emergency-contact").click(function () {
+            if (validateStep(currentStep)) {
+                saveFamilyMembers();
+                $("#relationship-id-emergency-contact-candidates").val("");
+                $("#name-emergency-contact-candidates").val("");
+            }
+        });
+        // family member end
+
+        $nextButton.click(function () {
+            const currentFieldset = steps.eq(currentStep);
+            const fieldsetID = currentFieldset.attr("id");
+            if (store.get(fieldsetID) !== undefined) {
+                currentStep++;
+                loadStepData(currentStep);
+                showStep(currentStep);
+            } else {
+                if (validateStep(currentStep) && currentStep < steps.length - 1) {
+                    saveStepData(currentStep);
+                    currentStep++;
+                    loadStepData(currentStep);
+                    showStep(currentStep);
+                }
+            }
+        });
+
+        $prevButton.click(function () {
+            if (currentStep > 0) {
+                currentStep--;
+                loadStepData(currentStep);
+                showStep(currentStep);
+            }
+        });
+
+        $("#multi-step-form").submit(function (e) {
+            console.info("clicked");
+            if (!validateStep(currentStep)) {
+                e.preventDefault();
+            } else {
+                saveStepData(currentStep);
+                store.clearAll();
+                alert("Form submitted!");
+            }
+        });
+
+        showStep(currentStep);
+        loadStepData(currentStep);
+        renderFamilyMembersTable();
+
+        function onSubmit(token) {
+            document.getElementById("multi-step-form").submit();
+        }
+    });
+</script>

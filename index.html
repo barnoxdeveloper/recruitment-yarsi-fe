@@ -11,6 +11,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -24,14 +25,14 @@
                 </div>
                 <form id="multi-step-form">
                     <!-- Data Pribadi -->
-                    <fieldset>
+                    <fieldset id="candidates">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Data Pribadi</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Personal Information)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="first-name-candidate" class="form-label"
                                                 >Nama Depan <span class="fst-italic">(First Name)</span>*</label
                                             >
@@ -47,7 +48,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="middle-name-candidate" class="form-label"
                                                 >Nama Tengah <span class="fst-italic">(Middle Name)</span>*</label
                                             >
@@ -63,7 +64,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="last-name-candidate" class="form-label"
                                                 >Nama Belakang <span class="fst-italic">(Last Name)</span>*</label
                                             >
@@ -79,14 +80,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                             <br />
                                             <div class="form-check form-check-inline">
                                                 <input
                                                     class="form-check-input"
                                                     type="radio"
-                                                    name="sex_id"
+                                                    name="sex_id_candidate"
                                                     id="sex-id-male-candidate"
                                                     value="1"
                                                     required
@@ -99,7 +100,7 @@
                                                 <input
                                                     class="form-check-input"
                                                     type="radio"
-                                                    name="sex_id"
+                                                    name="sex_id_candidate"
                                                     id="sex-id-female-candidate"
                                                     value="2"
                                                     required
@@ -111,7 +112,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="legal-identity-number-candidate" class="form-label"
                                                 >No. KTP <span class="fst-italic">(ID Number)</span>*</label
                                             >
@@ -127,7 +128,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="tax-identify-number-candidate" class="form-label"
                                                 >No. NPWP <span class="fst-italic">(Tax ID Number)</span>*</label
                                             >
@@ -143,7 +144,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="legal-address-candidate" class="form-label"
                                                 >Alamat KTP <span class="fst-italic">(ID address)</span>*</label
                                             >
@@ -158,7 +159,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="current-address-candidate" class="form-label"
                                                 >Alamat saat ini <span class="fst-italic">(Current Address)</span>*</label
                                             >
@@ -173,7 +174,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="phone-number-candidate" class="form-label"
                                                 >No. Handphone <span class="fst-italic">(Phone Number)</span>*</label
                                             >
@@ -189,7 +190,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="home-phone-number-candidate" class="form-label"
                                                 >No. Telepon Rumah <span class="fst-italic">(Home Phone Number)</span>*</label
                                             >
@@ -205,7 +206,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="email-candidate" class="form-label"
                                                 >Alamat Email <span class="fst-italic">(Email Address)</span>*</label
                                             >
@@ -221,7 +222,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="birth-place-candidate" class="form-label"
                                                 >Tempat Lahir <span class="fst-italic">(Place of Birth)</span>*</label
                                             >
@@ -237,7 +238,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="birth-date-candidate" class="form-label"
                                                 >Tanggal Lahir <span class="fst-italic">(Date of Birth)</span>*</label
                                             >
@@ -253,7 +254,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="marital-status-id-candidate" class="form-label"
                                                 >Status Pernikahan <span class="fst-italic">(Marital Status)</span>*</label
                                             >
@@ -263,16 +264,11 @@
                                                 name="marital_status_id"
                                                 id="marital-status-id-candidate"
                                                 required
-                                            >
-                                                <option value="">Select Status</option>
-                                                <option value="1" id="belum_menikah">Belum Menikah(Unmarried)</option>
-                                                <option value="2" id="menikah">Menikah (Married)</option>
-                                                <option value="3" id="cerai">Cerai (Divorce)</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="religion-id-candidate" class="form-label"
                                                 >Agama <span class="fst-italic">(Religion)</span>*</label
                                             >
@@ -282,37 +278,26 @@
                                                 name="religion_id"
                                                 id="religion-id-candidate"
                                                 required
-                                            >
-                                                <option value="">Select Agama (Religion)</option>
-                                                <option value="1" id="islam">Islam</option>
-                                                <option value="2" id="kristen">Kristen</option>
-                                                <option value="3" id="katolik">Katolik</option>
-                                                <option value="4" id="budha">Budha</option>
-                                                <option value="4" id="konghucu">Konghucu</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="ethnic-id-candidate" class="form-label"
                                                 >Suku Bangsa <span class="fst-italic">(ethnic)</span>*</label
                                             >
                                             <select
-                                                class="form-select"
+                                                class="form-control select2"
                                                 aria-label="ethnic-id-candidate"
                                                 name="ethnic_id"
                                                 id="ethnic-id-candidate"
                                                 required
-                                            >
-                                                <option value="">Select Suku Bangsa (ethnic)</option>
-                                                <option value="1" id="jawa">Jawa</option>
-                                                <option value="2" id="sunda">Sunda</option>
-                                                <option value="3" id="batak">Batak</option>
-                                            </select>
+                                                style="width: 100%"
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="weight-candidate" class="form-label"
                                                 >Berat Badan <span class="fst-italic">(Weight)</span>*</label
                                             >
@@ -323,12 +308,12 @@
                                                 id="weight-candidate"
                                                 placeholder="Berat Badan (Weight)"
                                                 required
-                                                maxlength="10"
+                                                maxlength="100"
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="height-candidate" class="form-label"
                                                 >Tinggi Badan <span class="fst-italic">(Height)</span>*</label
                                             >
@@ -339,31 +324,44 @@
                                                 id="height-candidate"
                                                 placeholder="Tinggi Badan (Height)"
                                                 required
-                                                maxlength="10"
+                                                maxlength="100"
                                             />
                                         </div>
                                     </div>
-                                </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-personal-information">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
+                                    <!-- <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
+                                            <label for="file-cv" class="form-label"
+                                                >Daftar Riwayat Hidup <span class="fst-italic">(Curriculum Vitae)</span>*</label
+                                            >
+                                            <input type="file" class="form-control" name="file_cv" id="file-cv" required accept="application/pdf" />
+                                        </div>
                                     </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
+                                            <label for="file-photo" class="form-label">Pas Photo 3x4*</label>
+                                            <input
+                                                type="file"
+                                                class="form-control"
+                                                name="file_photo"
+                                                id="file-photo"
+                                                accept="image/png, image/jpg, image/jpeg"
+                                                required
+                                            />
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat -->
-                    <fieldset>
+                    <fieldset id="emergency_contact_candidates">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Family Member / Who can be Contacted In an Emergency)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="relationship_id" class="form-label"
                                                 >Hubungan
                                                 <span class="fst-italic">(Relation)</span>
@@ -375,17 +373,11 @@
                                                 name="relationship_id"
                                                 id="relationship-id-emergency-contact-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Hubungan (Relation)</option>
-                                                <option value="suami" id="suami">Suami</option>
-                                                <option value="istri" id="istri">Istri</option>
-                                                <option value="anak" id="anak">Anak</option>
-                                                <option value="orang-tua" id="orang-tua">Orang Tua</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="name" class="form-label">Nama <span class="fst-italic">(Name)</span>*</label>
                                             <input
                                                 type="text"
@@ -394,12 +386,12 @@
                                                 id="name-emergency-contact-candidates"
                                                 placeholder="Nama (name)"
                                                 required
-                                                maxlength="10"
+                                                maxlength="100"
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                             <br />
                                             <div class="form-check form-check-inline">
@@ -431,7 +423,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="phone-number-emergency-contact-candidates" class="form-label"
                                                 >No. Handphone <span class="fst-italic">(Phone Number)</span>*</label
                                             >
@@ -447,7 +439,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="address-emergency-contact-candidates" class="form-label"
                                                 >Alamat <span class="fst-italic">(Address)</span>*</label
                                             >
@@ -462,26 +454,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-emergency-contact">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Data Keluarga / Family Information -->
-                    <fieldset>
+                    <fieldset id="family_informations">
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h3 class="fs-4">Data Keluarga</h3>
+                                <h3 class="fs-4">Data Keluarga(Sudah Menikah)</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Family Information)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="relationship-id-family-information-candidates" class="form-label"
                                                 >Hubungan <span class="fst-italic">(Relation)</span>*</label
                                             >
@@ -491,17 +475,11 @@
                                                 name="relationship_id"
                                                 id="relationship-id-family-information-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Hubungan (Relation)</option>
-                                                <option value="suami" id="suami">Suami</option>
-                                                <option value="istri" id="istri">Istri</option>
-                                                <option value="anak" id="anak">Anak</option>
-                                                <option value="orang-tua" id="orang-tua">Orang Tua</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="name-family-information-candidates" class="form-label"
                                                 >Nama <span class="fst-italic">(Name)</span>*</label
                                             >
@@ -512,19 +490,19 @@
                                                 id="name-family-information-candidates"
                                                 placeholder="Nama (name)"
                                                 required
-                                                maxlength="10"
+                                                maxlength="100"
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                             <br />
                                             <div class="form-check form-check-inline">
                                                 <input
                                                     class="form-check-input"
                                                     type="radio"
-                                                    name="sex_id"
+                                                    name="sex_id_family_information"
                                                     id="sex-id-male-family-information-candidates"
                                                     value="1"
                                                     required
@@ -537,7 +515,7 @@
                                                 <input
                                                     class="form-check-input"
                                                     type="radio"
-                                                    name="sex_id"
+                                                    name="sex_id_family_information"
                                                     id="sex-id-female-family-information-candidates"
                                                     value="2"
                                                     required
@@ -549,7 +527,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="birth-place-family-information-candidates" class="form-label"
                                                 >Tempat Lahir <span class="fst-italic">(Place of Birth)</span>*</label
                                             >
@@ -565,7 +543,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="birth-date-family-information-candidates" class="form-label"
                                                 >Tanggal Lahir <span class="fst-italic">(Date of Birth)</span>*</label
                                             >
@@ -581,7 +559,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="education-id-family-information-candidates" class="form-label"
                                                 >Pendidikan <span class="fst-italic">(Education)</span>*</label
                                             >
@@ -591,20 +569,11 @@
                                                 name="education_id"
                                                 id="education-id-family-information-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Pendidikan (Education)</option>
-                                                <option value="1" id="SD">SD</option>
-                                                <option value="2" id="SMP">SMP</option>
-                                                <option value="3" id="SMA">SMA</option>
-                                                <option value="4" id="D3">D3</option>
-                                                <option value="4" id="S1">S1</option>
-                                                <option value="4" id="S2">S2</option>
-                                                <option value="4" id="S3">S3</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="job-id-family-information-candidates" class="form-label"
                                                 >Pekerjaan <span class="fst-italic">(Occupation)</span>*</label
                                             >
@@ -614,35 +583,43 @@
                                                 name="job_id"
                                                 id="job-id-family-information-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Pekerjaan (Occupation)</option>
-                                                <option value="1" id="PEGAWAI SWASTA">PEGAWAI SWASTA</option>
-                                                <option value="2" id="PNS">PNS</option>
-                                                <option value="3" id="PELAJAR">PELAJAR</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-family-information">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-family-information">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-family-information">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Hubungan</th>
+                                                <th>Nama</th>
+                                                <th>Jenis Kelamin</th>
+                                                <th>Tempat Lahir</th>
+                                                <th>Tanggal Lahir</th>
+                                                <th>Pendidikan</th>
+                                                <th>Pekerjaan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Identitas Orangtua & Saudara / Family Member -->
-                    <fieldset>
+                    <fieldset id="family_members">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Identitas Orangtua & Saudara</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Parents and Brothers/Sisters Information)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="relationship-id-family-member-candidates" class="form-label"
                                                 >Hubungan <span class="fst-italic">(Relation)</span>*</label
                                             >
@@ -652,17 +629,11 @@
                                                 name="relationship_id"
                                                 id="relationship-id-family-member-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Hubungan (Relation)</option>
-                                                <option value="suami" id="suami">Suami</option>
-                                                <option value="istri" id="istri">Istri</option>
-                                                <option value="anak" id="anak">Anak</option>
-                                                <option value="orang-tua" id="orang-tua">Orang Tua</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="name-family-member-candidates" class="form-label"
                                                 >Nama <span class="fst-italic">(Name)</span>*</label
                                             >
@@ -673,19 +644,19 @@
                                                 id="name-family-member-candidates"
                                                 placeholder="Nama (name)"
                                                 required
-                                                maxlength="10"
+                                                maxlength="100"
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label class="form-label">Jenis Kelamin <span class="fst-italic">(Gender)</span>*</label>
                                             <br />
                                             <div class="form-check form-check-inline">
                                                 <input
                                                     class="form-check-input"
                                                     type="radio"
-                                                    name="sex_id"
+                                                    name="sex_id_family_member"
                                                     id="sex-id-male-family-member-candidates"
                                                     value="1"
                                                     required
@@ -698,7 +669,7 @@
                                                 <input
                                                     class="form-check-input"
                                                     type="radio"
-                                                    name="sex_id"
+                                                    name="sex_id_family_member"
                                                     id="sex-id-female-family-member-candidates"
                                                     value="2"
                                                     required
@@ -710,7 +681,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="birth-place-family-member-candidates" class="form-label"
                                                 >Tempat Lahir <span class="fst-italic">(Place of Birth)</span>*</label
                                             >
@@ -726,7 +697,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="birth-date-family-member-candidates" class="form-label"
                                                 >Tanggal Lahir <span class="fst-italic">(Date of Birth)</span>*</label
                                             >
@@ -742,30 +713,21 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="education-idfamily-member-candidates" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="education-id-family-member-candidates" class="form-label"
                                                 >Pendidikan <span class="fst-italic">(Education)</span>*</label
                                             >
                                             <select
                                                 class="form-select"
                                                 aria-label="education-id-family-member-candidates"
                                                 name="education_id"
-                                                id="education-idfamily-member-candidates"
+                                                id="education-id-family-member-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Pendidikan (Education)</option>
-                                                <option value="1" id="SD">SD</option>
-                                                <option value="2" id="SMP">SMP</option>
-                                                <option value="3" id="SMA">SMA</option>
-                                                <option value="4" id="D3">D3</option>
-                                                <option value="4" id="S1">S1</option>
-                                                <option value="4" id="S2">S2</option>
-                                                <option value="4" id="S3">S3</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="job-id-family-member-candidates" class="form-label"
                                                 >Pekerjaan <span class="fst-italic">(Occupation)</span>*</label
                                             >
@@ -775,35 +737,43 @@
                                                 name="job_id"
                                                 id="job-id-family-member-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Pekerjaan (Occupation)</option>
-                                                <option value="1" id="PEGAWAI SWASTA">PEGAWAI SWASTA</option>
-                                                <option value="2" id="PNS">PNS</option>
-                                                <option value="3" id="PELAJAR">PELAJAR</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-family-member">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-family-member">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-family-member">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Hubungan</th>
+                                                <th>Nama</th>
+                                                <th>Jenis Kelamin</th>
+                                                <th>Tempat Lahir</th>
+                                                <th>Tanggal Lahir</th>
+                                                <th>Pendidikan</th>
+                                                <th>Pekerjaan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Data Riwayat Pendidikan -->
-                    <fieldset>
+                    <fieldset id="education_background">
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h3 class="fs-4">Data Riwayat Pendidikan</h3>
+                                <h3 class="fs-4">Data Riwayat Pendidikan Terakhir</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Educational Background)</h4>
                                 <div class="row g-3">
-                                    <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
                                             <label for="education-id-education-background-candidates" class="form-label"
                                                 >Jenjang <span class="fst-italic">(Academic Degree)</span>*</label
                                             >
@@ -813,20 +783,11 @@
                                                 name="education_id"
                                                 id="education-id-education-background-candidates"
                                                 required
-                                            >
-                                                <option value="">Select Jenjang (Academic Degree)</option>
-                                                <option value="1" id="SD">SD</option>
-                                                <option value="2" id="SMP">SMP</option>
-                                                <option value="3" id="SMA">SMA</option>
-                                                <option value="4" id="D3">D3</option>
-                                                <option value="4" id="S1">S1</option>
-                                                <option value="4" id="S2">S2</option>
-                                                <option value="4" id="S3">S3</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
                                             <label for="institution-name-education-background-candidates" class="form-label"
                                                 >Nama Institusi <span class="fst-italic">(Institution Name)</span>*</label
                                             >
@@ -841,8 +802,8 @@
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
                                             <label for="major-education-background-candidates" class="form-label"
                                                 >Jurusan <span class="fst-italic">(Departement)</span>*</label
                                             >
@@ -857,8 +818,8 @@
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
                                             <label for="started-year-education-background-candidates" class="form-label"
                                                 >Tahun Mulai <span class="fst-italic">(Started Year)</span>*</label
                                             >
@@ -867,14 +828,14 @@
                                                 class="form-control"
                                                 name="started_year"
                                                 id="started-year-education-background-candidates"
-                                                placeholder="Tahun Mulai(Started Year)"
+                                                placeholder="Tahun Mulai (Started Year)"
                                                 required
                                                 maxlength="4"
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
                                             <label for="ended-year-education-background-candidates" class="form-label"
                                                 >Tahun Selesai <span class="fst-italic">(Ended Year)</span>*</label
                                             >
@@ -883,14 +844,14 @@
                                                 class="form-control"
                                                 name="ended_year"
                                                 id="ended-year-education-background-candidates"
-                                                placeholder="Tahun Selesai(Ended Year)"
+                                                placeholder="Tahun Selesai (Ended Year)"
                                                 required
                                                 maxlength="4"
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
                                             <label for="final-score-education-background-candidates" class="form-label"
                                                 >Nilai Akhir / IPK <span class="fst-italic">(Final Score)</span>*</label
                                             >
@@ -901,39 +862,44 @@
                                                 id="final-score-education-background-candidates"
                                                 placeholder="IPK (Final Score)"
                                                 required
-                                                maxlength="10"
+                                                maxlength="100"
                                             />
                                         </div>
                                     </div>
-                                </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-education-background">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-3">
+                                            <label for="file-ijasah" class="form-label">Ijasah*</label>
+                                            <input
+                                                type="file"
+                                                class="form-control"
+                                                name="file_ijasah"
+                                                id="file-ijasah"
+                                                required
+                                                accept="application/pdf"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Data Pengalaman Organisasi -->
-                    <fieldset>
+                    <fieldset id="organization_experiences">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Data Pengalaman Organisasi</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Organization Experience)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="organization-name-organization-experience-candidates" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="organization-name-experience-candidates" class="form-label"
                                                 >Nama Organisasi <span class="fst-italic">(Organization Name)</span>*</label
                                             >
                                             <input
                                                 type="text"
                                                 class="form-control"
                                                 name="organization_name"
-                                                id="organization-name-organization-experience-candidates"
+                                                id="organization-name-experience-candidates"
                                                 placeholder="Nama Organisasi (Organization Name)"
                                                 required
                                                 maxlength="100"
@@ -941,7 +907,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="position-organization-experience-candidates" class="form-label"
                                                 >Jabatan <span class="fst-italic">(Position)</span>*</label
                                             >
@@ -957,7 +923,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="year-organization-experience-candidates" class="form-label"
                                                 >Tahun <span class="fst-italic">(Year)</span>*</label
                                             >
@@ -973,7 +939,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="description-organization-experience-candidates" class="form-label"
                                                 >Keterangan <span class="fst-italic">(Description)</span>*</label
                                             >
@@ -988,26 +954,36 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-organization-experience">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-organization-experience">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-organization-experience">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>Jabatan</th>
+                                                <th>Tahun</th>
+                                                <th>Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Sertifikasi Keahlian/Profesi -->
-                    <fieldset>
+                    <fieldset id="expertise_certification">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Sertifikasi Keahlian/Profesi</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Expertise/Profession Certification)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="type-of-expertise-expertise-certification-candidates" class="form-label"
                                                 >Jenis Keahlian <span class="fst-italic">(Type Of Expertise)</span>*</label
                                             >
@@ -1023,7 +999,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="qualification-type-expertise-certification-candidates" class="form-label"
                                                 >Tipe Kualifikasi <span class="fst-italic">(Qualification Type)</span>*</label
                                             >
@@ -1039,7 +1015,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="given-by-expertise-certification-candidates" class="form-label"
                                                 >Pemberi Sertifikasi <span class="fst-italic">(Given By)</span>*</label
                                             >
@@ -1055,7 +1031,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="year-expertise-certification-candidates" class="form-label"
                                                 >Tahun <span class="fst-italic">(Year)</span>*</label
                                             >
@@ -1071,7 +1047,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="description-expertise-certification-candidates" class="form-label"
                                                 >Keterangan <span class="fst-italic">(Description)</span>*</label
                                             >
@@ -1086,26 +1062,37 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-certification">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-expertise-certification">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-expertise-certification">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Qualification</th>
+                                                <th>Penyelenggara</th>
+                                                <th>Tahun</th>
+                                                <th>Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Kursus/Pelatihan -->
-                    <fieldset>
+                    <fieldset id="courses_training">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Kursus/Pelatihan</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Courses/Training)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="type-of-training-courses-training-candidates" class="form-label"
                                                 >Jenis <span class="fst-italic">(Type)</span>*</label
                                             >
@@ -1121,7 +1108,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="level-courses-training-candidates" class="form-label"
                                                 >Level <span class="fst-italic">(Level)</span>*</label
                                             >
@@ -1137,7 +1124,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="organized-by-courses-training-candidates" class="form-label"
                                                 >Penyelenggara <span class="fst-italic">(Organized By)</span>*</label
                                             >
@@ -1153,7 +1140,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="year-courses-training-candidates" class="form-label"
                                                 >Tahun <span class="fst-italic">(Year)</span>*</label
                                             >
@@ -1169,7 +1156,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="description-courses-training-candidates" class="form-label"
                                                 >Keterangan <span class="fst-italic">(Description)</span>*</label
                                             >
@@ -1184,26 +1171,37 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-courses">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-courses-training">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-courses-training">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Level</th>
+                                                <th>Penyelenggara</th>
+                                                <th>Tahun</th>
+                                                <th>Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Bahasa Asing -->
-                    <fieldset>
+                    <fieldset id="foreign_languages">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Bahasa Asing</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Foreign Language)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-4 col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="language" class="form-label">Bahasa <span class="fst-italic">(Language)</span>*</label>
                                             <input
                                                 type="text"
@@ -1217,15 +1215,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-12">
-                                        <div class="mb-3">
-                                            <label for="speaking_ability_level" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="speaking-ability-level" class="form-label"
                                                 >Kemampuan Berbicara <span class="fst-italic">(Speaking Ability)</span>*</label
                                             >
                                             <select
                                                 class="form-select"
                                                 aria-label="speaking_ability_level"
                                                 name="speaking_ability_level"
-                                                id="speaking_ability_level"
+                                                id="speaking-ability-level"
                                                 required
                                             >
                                                 <option value="">Select Level</option>
@@ -1236,15 +1234,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-12">
-                                        <div class="mb-3">
-                                            <label for="writing_ability_level" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="writing-ability-level" class="form-label"
                                                 >Kemampuan Menulis <span class="fst-italic">(Writing Ability)</span>*</label
                                             >
                                             <select
                                                 class="form-select"
                                                 aria-label="speaking_ability_level"
                                                 name="writing_ability_level"
-                                                id="writing_ability_level"
+                                                id="writing-ability-level"
                                                 required
                                             >
                                                 <option value="">Select Level</option>
@@ -1255,32 +1253,43 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-foreign-language">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-foreign-language">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-foreign-language">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Bahas</th>
+                                                <th>Kemampuan Bicara</th>
+                                                <th>Kemampuan Menulis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Pengalaman Kerja -->
-                    <fieldset>
+                    <fieldset id="work_experience">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Pengalaman Kerja</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Work Experience)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="company" class="form-label">Nama Perusahaan <span class="fst-italic">(Company)</span>*</label>
+                                        <div class="form-group mb-3">
+                                            <label for="company-work-experience" class="form-label"
+                                                >Nama Perusahaan <span class="fst-italic">(Company)</span>*</label
+                                            >
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                name="company"
-                                                id="company"
+                                                name="company_work_experience"
+                                                id="company-work-experience"
                                                 placeholder="Nama Perusahaan (Company)"
                                                 required
                                                 maxlength="100"
@@ -1288,13 +1297,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="position" class="form-label">Jabatan <span class="fst-italic">(Position)</span>*</label>
+                                        <div class="form-group mb-3">
+                                            <label for="position-work-experience" class="form-label"
+                                                >Jabatan <span class="fst-italic">(Position)</span>*</label
+                                            >
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                name="position"
-                                                id="position"
+                                                name="position_work_experience"
+                                                id="position-work-experience"
                                                 placeholder="Position"
                                                 required
                                                 maxlength="100"
@@ -1302,32 +1313,45 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="from_date" class="form-label">Dari <span class="fst-italic">(From)</span>*</label>
+                                        <div class="form-group mb-3">
+                                            <label for="from-date-work-experience" class="form-label"
+                                                >Dari <span class="fst-italic">(From)</span>*</label
+                                            >
                                             <input
                                                 type="date"
                                                 class="form-control"
-                                                name="from_date"
-                                                id="from_date"
+                                                name="from_date_work_experience"
+                                                id="from-date-work-experience"
                                                 placeholder="Dari (From)"
                                                 required
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="to_date" class="form-label">Sampai <span class="fst-italic">(To)</span>*</label>
-                                            <input type="date" class="form-control" name="to_date" id="to_date" placeholder="Sampai (To)" required />
+                                        <div class="form-group mb-3">
+                                            <label for="to-date-work-experience" class="form-label"
+                                                >Sampai <span class="fst-italic">(To)</span>*</label
+                                            >
+                                            <input
+                                                type="date"
+                                                class="form-control"
+                                                name="to_date_work_experience"
+                                                id="to-date-work-experience"
+                                                placeholder="Sampai (To)"
+                                                required
+                                            />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="location" class="form-label">Tempat <span class="fst-italic">(Location)</span>*</label>
+                                        <div class="form-group mb-3">
+                                            <label for="location-work-experience" class="form-label"
+                                                >Tempat <span class="fst-italic">(Location)</span>*</label
+                                            >
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                name="location"
-                                                id="location"
+                                                name="location_work_experience"
+                                                id="location-work-experience"
                                                 placeholder="Tempat (Location)"
                                                 required
                                                 maxlength="255"
@@ -1335,29 +1359,29 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="take_home_pay" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="take-home-pay-work-experience" class="form-label"
                                                 >Gaji terakhir <span class="fst-italic">(Take Home Pay/Net)</span>*</label
                                             >
                                             <input
                                                 type="number"
                                                 class="form-control"
-                                                name="take_home_pay"
-                                                id="take_home_pay"
+                                                name="take_home_pay_work_experience"
+                                                id="take-home-pay-work-experience"
                                                 placeholder="Gaji terakhir (Take Home Pay/Net)"
                                                 required
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="job_description" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="job-description-work-experience" class="form-label"
                                                 >Uraian Pekerjaan <span class="fst-italic">(Job Description)</span>*</label
                                             >
                                             <textarea
                                                 class="form-control"
-                                                name="job_description"
-                                                id="job_description"
+                                                name="job_description_work_experience"
+                                                id="job-description-work-experience"
                                                 rows="3"
                                                 placeholder="Uraian Pekerjaan (Job Description)"
                                                 required
@@ -1365,14 +1389,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="reason_for_resignation" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="reason-for-resignation-work-experience" class="form-label"
                                                 >Alasan Keluar <span class="fst-italic">(Reason for resignation)</span>*</label
                                             >
                                             <textarea
                                                 class="form-control"
-                                                name="reason_for_resignation"
-                                                id="reason_for_resignation"
+                                                name="reason_for_resignation_work_experience"
+                                                id="reason-for-resignation-work-experience"
                                                 rows="3"
                                                 placeholder="Alasan Keluar (Reason for resignation)"
                                                 required
@@ -1380,114 +1404,109 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-work-experience">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
-                                    </div>
+                                <!-- Button -->
+                                <div class="d-flex justify-content-center mb-5">
+                                    <button type="button" class="btn btn-success" id="btn-save-work-experience">Tambah Data</button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="table-work-experience">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>Perusahaan</th>
+                                                <th>Posisi</th>
+                                                <th>Mulai</th>
+                                                <th>Selesai</th>
+                                                <th>Lokasi</th>
+                                                <th>Gaji</th>
+                                                <th>Deskripsi</th>
+                                                <th>Alasan Resign</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Saudara/Teman/Kenalan yang Bekerja Pada Rumah Sakit YARSI -->
-                    <fieldset>
+                    <fieldset id="hospital_connection">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Saudara/Teman/Kenalan yang Bekerja Pada Rumah Sakit YARSI</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Relatives/Friends/Acquaintances Who Work At Rumah Sakit YARSI)</h4>
                                 <div class="row g-3">
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="relationship_id" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="relationship-id-hospital-connection" class="form-label"
                                                 >Hubungan <span class="fst-italic">(Relation)</span>*</label
                                             >
                                             <select
                                                 class="form-select"
-                                                aria-label="relationship_id"
+                                                aria-label="relationship_id_hospital_connection"
                                                 name="relationship_id"
-                                                id="relationship_id"
+                                                id="relationship-id-hospital-connection"
                                                 required
-                                            >
-                                                <option value="">Select Hubungan (Relation)</option>
-                                                <option value="suami" id="suami">Suami</option>
-                                                <option value="istri" id="istri">Istri</option>
-                                                <option value="anak" id="anak">Anak</option>
-                                                <option value="orang-tua" id="orang-tua">Orang Tua</option>
-                                                <option value="Teman" id="teman">Teman</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="name" class="form-label">Nama <span class="fst-italic">(name)</span>*</label>
+                                        <div class="form-group mb-3">
+                                            <label for="name-hospital-connection" class="form-label"
+                                                >Nama <span class="fst-italic">(name)</span>*</label
+                                            >
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                name="name"
-                                                id="name"
+                                                name="name_hospital_connection"
+                                                id="name-hospital-connection"
                                                 placeholder="Nama (name)"
+                                                maxlength="100"
                                                 required
-                                                maxlength="10"
                                             />
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="department_id" class="form-label"
+                                        <div class="form-group mb-3">
+                                            <label for="department-id-hospital-connection" class="form-label"
                                                 >Bagian <span class="fst-italic">(Departement)</span>*</label
                                             >
-                                            <select class="form-select" aria-label="department_id" name="department_id" id="department_id" required>
-                                                <option value="">Select Bagian (Departement)</option>
-                                                <option value="DEPARTMEN PELAYANAN MEDIS" id="DEPARTMEN PELAYANAN MEDIS">
-                                                    DEPARTMEN PELAYANAN MEDIS
-                                                </option>
-                                                <option value="DEPARTMEN PENUNJANG MEDIS" id="DEPARTMEN PENUNJANG MEDIS">
-                                                    DEPARTMEN PENUNJANG MEDIS
-                                                </option>
-                                                <option value="DEPARTMEN UMUM" id="DEPARTMEN UMUM">DEPARTMEN UMUM</option>
-                                                <option value="DEPARTMEN LEGAL & ADMINISTRASI" id="DEPARTMEN LEGAL & ADMINISTRASI">
-                                                    DEPARTMEN LEGAL & ADMINISTRASI
-                                                </option>
-                                            </select>
+                                            <select
+                                                class="form-select"
+                                                aria-label="department-id-hospital-connection"
+                                                name="department_id_hospital_connection"
+                                                id="department-id-hospital-connection"
+                                                required
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label for="position_id" class="form-label">Jabatan <span class="fst-italic">(Position)</span>*</label>
-                                            <select class="form-select" aria-label="position_id" name="position_id" id="position_id" required>
-                                                <option value="">Select Bagian (Departement)</option>
-                                                <option value="DIREKTUR UTAMA" id="DIREKTUR UTAMA">DIREKTUR UTAMA</option>
-                                                <option value="DIREKTUR MEDIS" id="DIREKTUR MEDIS">DIREKTUR MEDIS</option>
-                                                <option value="DIREKTUR SDI" id="DIREKTUR SDI">DIREKTUR SDI</option>
-                                                <option value="KEPALA BAGIAN/KEPALA BIDANG" id="KEPALA BAGIAN/KEPALA BIDANG">
-                                                    KEPALA BAGIAN/KEPALA BIDANG
-                                                </option>
-                                            </select>
+                                        <div class="form-group mb-3">
+                                            <label for="position_id-hospital-connection" class="form-label"
+                                                >Jabatan <span class="fst-italic">(Position)</span>*</label
+                                            >
+                                            <select
+                                                class="form-select"
+                                                aria-label="position_id-hospital-connection"
+                                                name="position_id_hospital_connection"
+                                                id="position_id-hospital-connection"
+                                                required
+                                            ></select>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <div class="mt-3">
-                                        <button type="button" class="btn btn-success" id="btn-save-hostpital-connection">
-                                            <i class="bi bi-check2-all"></i>
-                                            Save
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <!-- Data Perspektif Diri -->
-                    <fieldset>
+                    <fieldset id="self_perspective">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Data Perspektif Diri</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Self Perspective)</h4>
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="self_perspective" class="form-label"
                                                 >1. Ceritakan dengan singkat mengenai diri Anda menurut pandangan Anda pribadi?*</label
                                             >
@@ -1503,7 +1522,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="strengths" class="form-label"
                                                 >2. Sebutkan minimal 3 (tiga) kelebihan yang Anda miliki?*</label
                                             >
@@ -1519,7 +1538,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="weaknesses" class="form-label"
                                                 >3. Sebutkan minimal 3 (tiga) kekurangan yang Anda miliki?*</label
                                             >
@@ -1535,7 +1554,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="successes" class="form-label"
                                                 >4. Sebutkan minimal 3 (tiga) keberhasilan yang pernah Anda raih dalam hidup?*</label
                                             >
@@ -1551,7 +1570,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="failures" class="form-label"
                                                 >5. Sebutkan kegagalan-kegagalan yang pernah Anda alami dalam hidup?*</label
                                             >
@@ -1560,7 +1579,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="career_overview" class="form-label"
                                                 >6. Berikan gambaran singkat mengenai karir / pekerjaan yang Anda inginkan?*</label
                                             >
@@ -1576,7 +1595,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="future_expectations" class="form-label"
                                                 >7. Sebutkan harapan-harapan Anda di masa yang akan datang?*</label
                                             >
@@ -1604,14 +1623,14 @@
                         </div>
                     </fieldset>
                     <!-- Data Tambahan -->
-                    <fieldset>
+                    <fieldset id="additional_information">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Data Tambahan</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Additonal Information)</h4>
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="physical_condition" class="form-label"
                                                 >1. Apakah Anda mengalami gangguan fisik (seperti; penglihatan, pendengaran, dll)? Jika ada, gambarkan
                                                 kondisi Anda saat ini dan sebutkan jenis pengobatan yang telah Anda lakukan?*</label
@@ -1631,7 +1650,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="severe_diseases" class="form-label"
                                                 >2. Apakah Anda pernah mengalami atau memiliki penyakit berat (seperti; jantung, diabetes, dll)? Jika
                                                 iya, sebutkan?*</label
@@ -1651,7 +1670,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="hospitalizations" class="form-label"
                                                 >3. Pernahkah Anda dirawat di Rumah Sakit? Jika pernah, sebutkan kapan waktunya serta apa
                                                 penyebabnya?*</label
@@ -1670,7 +1689,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="last_medical_checkup" class="form-label"
                                                 >4. Kapan terakhir medical check up?, Apa Hasilnya?*</label
                                             >
@@ -1700,14 +1719,14 @@
                         </div>
                     </fieldset>
                     <!-- Pertanyaan SDM -->
-                    <fieldset>
+                    <fieldset id="human_resources_tests">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Pertanyaan SDM</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Human Resources Test)</h4>
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="first_name" class="form-label">Nama <span class="fst-italic">(Name)</span>*</label>
                                             <input
                                                 type="text"
@@ -1721,7 +1740,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="job_vacancy_id" class="form-label"
                                                 >Jabatan yang dilamar <span class="fst-italic">(Applied Position)</span>*</label
                                             >
@@ -1731,17 +1750,11 @@
                                                 name="job_vacancy_id"
                                                 id="job_vacancy_id"
                                                 required
-                                            >
-                                                <option value="">Select Jabatan yang dilamar</option>
-                                                <option value="1" id="JOB VACANCY 1">JOB VACANCY 1</option>
-                                                <option value="2" id="JOB VACANCY 2">JOB VACANCY 2</option>
-                                                <option value="3" id="JOB VACANCY 3">JOB VACANCY 3</option>
-                                                <option value="4" id="JOB VACANCY 4">JOB VACANCY 4</option>
-                                            </select>
+                                            ></select>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="date" class="form-label"
                                                 >Tanggal Hari Ini <span class="fst-italic">(Today’s Date)</span>*</label
                                             >
@@ -1760,7 +1773,7 @@
                         </div>
                     </fieldset>
                     <!-- Komitmen Dan Motivasi -->
-                    <fieldset>
+                    <fieldset id="human_resources_tests_commitment">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <div class="col-12 border border-2 p-2 mb-3">
@@ -1774,7 +1787,7 @@
                                 <h4 class="fs-5 mb-4 fst-italic">(Commitment and Motivation)</h4>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="source_of_info" class="form-label"
                                                 >A. Darimanakah anda mendapatkan informasi lowongan kerja Rumah Sakit YARSI?*
                                             </label>
@@ -1790,7 +1803,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="motivation" class="form-label">B. Mengapa anda ingin bekerja di Rumah Sakit YARSI?*</label>
                                             <p class="text-muted fst-italic">(Why do you want to work in Yarsi Hospital?)</p>
                                             <textarea
@@ -1804,7 +1817,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="self_assessment" class="form-label"
                                                 >C. Apakah anda yakin dengan kemampuan anda sekarang dapat diterima bekerja di Rumah Sakit
                                                 YARSI?*</label
@@ -1821,7 +1834,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="desired_position" class="form-label"
                                                 >D. Jika anda diterima, posisi jabatan apa yang anda inginkan?*</label
                                             >
@@ -1837,7 +1850,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="coping_with_department_change" class="form-label"
                                                 >E. Apa yang anda lakukan, jika anda ditempatkan di jabatani yang bukan anda inginkan?*</label
                                             >
@@ -1855,7 +1868,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="previous_job_challenges" class="form-label"
                                                 >F. Kesulitan apa yang anda alami pada pekerjaan sebelumnya?*</label
                                             >
@@ -1873,7 +1886,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="reason_for_resignation" class="form-label"
                                                 >G. Mengapa anda mengundurkan diri dari pekerjaan sebelumnya?*</label
                                             >
@@ -1901,14 +1914,14 @@
                         </div>
                     </fieldset>
                     <!-- Penangan Stress -->
-                    <fieldset>
+                    <fieldset id="human_resources_tests_stress_handle">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Penangan Stress</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Stress Handling)</h4>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="conflict_management" class="form-label"
                                                 >A. Apa yang anda lakukan jika terjadi konflik dengan rekan kerja anda?*
                                             </label>
@@ -1924,7 +1937,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="stress_management" class="form-label"
                                                 >B. Bagaimana Anda mengelola atau menangani stres di tempat kerja?*</label
                                             >
@@ -1940,7 +1953,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="overtime_availability" class="form-label"
                                                 >C. Apakah Anda bersedia untuk bekerja lembur?*</label
                                             >
@@ -1956,7 +1969,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="handling_complaints" class="form-label"
                                                 >D. Apa yang akan Anda lakukan jika Anda mendapatkan keluhan dari pasien atau keluarga?*</label
                                             >
@@ -1984,14 +1997,14 @@
                         </div>
                     </fieldset>
                     <!-- Lain-lain -->
-                    <fieldset>
+                    <fieldset id="human_resources_tests_other">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h3 class="fs-4">Lain-lain</h3>
                                 <h4 class="fs-5 mb-4 fst-italic">(Others)</h4>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="salary_expectation" class="form-label">A. Gaji yang diharapkan?*</label>
                                             <p class="text-muted fst-italic">(Expected Salary)</p>
                                             <input
@@ -2005,7 +2018,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="mb-3">
+                                        <div class="form-group mb-3">
                                             <label for="benefits_facilities" class="form-label">B. Tunjangan / Fasilitas?*</label>
                                             <p class="text-muted fst-italic">(Benefits / Facilities)</p>
                                             <textarea
@@ -2555,14 +2568,32 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/store.js/2.0.1/store.legacy.min.js"
+            integrity="sha512-XbzqqqogVHe2RPEnKNxzuW+57fuEDGL4O6wdxh/W75oJjbgpwa1KHB4XpUZ2rMT/hhRUI1L1n9hNpMvSJb6DiA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
         <script>
             $(document).ready(function () {
-                var currentStep = 0;
-                var steps = $("fieldset");
-                var $prevButton = $(".prev-step");
-                var $nextButton = $(".next-step");
-                var $submitButton = $(".submit-button");
+                $("#ethnic-id-candidate").select2({
+                    width: "100%", // Ensure the width is set to 100% to make it responsive
+                });
+                getJobVacancy();
+                getMaritalStatus();
+                getReligions();
+                getEthnics();
+                getRelationship();
+                getEducations();
+                getJobs();
+
+                let currentStep = 0;
+                let steps = $("fieldset");
+                let $prevButton = $(".prev-step");
+                let $nextButton = $(".next-step");
+                let $submitButton = $(".submit-button");
 
                 function showStep(step) {
                     steps.removeClass("active");
@@ -2574,8 +2605,8 @@
                 }
 
                 function validateStep(step) {
-                    var inputs = steps.eq(step).find(":input[required]");
-                    var isValid = true;
+                    let inputs = steps.eq(step).find(":input[required]");
+                    let isValid = true;
                     inputs.each(function () {
                         if (!this.checkValidity()) {
                             isValid = false;
@@ -2587,35 +2618,633 @@
                     return isValid;
                 }
 
+                function saveStepData(step) {
+                    let fieldsetID = steps.eq(step).attr("id");
+                    if (fieldsetID === "family_informations") {
+                        saveFamilyInformations();
+                    } else if (fieldsetID === "family_members") {
+                        saveFamilyMembers();
+                    } else if (fieldsetID === "organization_experiences") {
+                        saveOrganizationExperiences();
+                    } else if (fieldsetID === "expertise_certification") {
+                        saveExpertiseCertification();
+                    } else if (fieldsetID === "courses_training") {
+                        saveCoursesTraining();
+                    } else if (fieldsetID === "foreign_languages") {
+                        saveForeignLanguage();
+                    } else if (fieldsetID === "work_experience") {
+                        saveWorkExperience();
+                    } else {
+                        let inputs = steps.eq(step).find(":input");
+                        let stepData = {};
+                        inputs.each(function () {
+                            stepData[this.name] = $(this).val();
+                        });
+                        store.set(fieldsetID, stepData);
+                    }
+                }
+
+                function loadStepData(step) {
+                    let fieldsetID = steps.eq(step).attr("id");
+                    let stepData = store.get(fieldsetID);
+                    if (stepData) {
+                        let inputs = steps.eq(step).find(":input");
+                        inputs.each(function () {
+                            $(this).val(stepData[this.name]);
+                        });
+                    }
+                }
+
+                // family information
+                function saveFamilyInformations() {
+                    let familyInformations = store.get("family_informations") || []; // Default to empty array if not set
+                    let relationship = $("#relationship-id-family-information-candidates").val();
+                    let name = $("#name-family-information-candidates").val();
+                    let sex_id = $('input[name="sex_id_family_information"]:checked').val();
+                    let birth_place = $("#birth-place-family-information-candidates").val();
+                    let birth_date = $("#birth-date-family-information-candidates").val();
+                    let education = $("#education-id-family-information-candidates").val();
+                    let job = $("#job-id-family-information-candidates").val();
+                    if (relationship && name && sex_id && birth_place && birth_date && education && job) {
+                        familyInformations.push({
+                            relationship: relationship,
+                            name: name,
+                            sex_id: sex_id,
+                            birth_place: birth_place,
+                            birth_date: birth_date,
+                            education: education,
+                            job: job,
+                        });
+                    }
+                    store.set("family_informations", familyInformations);
+                    $("#family_informations :input").prop("required", false);
+                    $("#family_informations :input").each(function () {
+                        if ($(this).is(":radio") || $(this).is(":checkbox")) {
+                            $(this).prop("checked", false);
+                        } else {
+                            $(this).val("");
+                        }
+                    });
+                    // Remove required attribute
+                    $("#family_informations :input").prop("required", false);
+                    renderFamilyInformationTable();
+                }
+
+                function renderFamilyInformationTable() {
+                    let familyInformations = store.get("family_informations") || [];
+                    let $tableBody = $("#table-family-information tbody");
+                    $tableBody.empty();
+                    familyInformations.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.relationship}</td>
+                                <td>${member.name}</td>
+                                <td>${member.sex_id}</td>
+                                <td>${member.birth_place}</td>
+                                <td>${member.birth_date}</td>
+                                <td>${member.education}</td>
+                                <td>${member.job}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-family-information").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveFamilyInformations();
+                    }
+                });
+                // family information end
+
+                // family member start
+                function saveFamilyMembers() {
+                    let familyMembers = store.get("family_members") || []; // Default to empty array if not set
+                    let relationship = $("#relationship-id-family-member-candidates").val();
+                    let name = $("#name-family-member-candidates").val();
+                    let sex_id = $('input[name="sex_id_family_member"]:checked').val();
+                    let birth_place = $("#birth-place-family-member-candidates").val();
+                    let birth_date = $("#birth-date-family-member-candidates").val();
+                    let education = $("#education-id-family-member-candidates").val();
+                    let job = $("#job-id-family-member-candidates").val();
+
+                    // Check if both relationship and name have values before pushing
+                    if (relationship && name && sex_id && birth_place && birth_date && education && job) {
+                        familyMembers.push({
+                            relationship: relationship,
+                            name: name,
+                            sex_id: sex_id,
+                            birth_place: birth_place,
+                            birth_date: birth_date,
+                            education: education,
+                            job: job,
+                        });
+                        console.info("aaaa");
+                    }
+
+                    store.set("family_members", familyMembers);
+                    $("#family_members :input").prop("required", false);
+                    $("#family_members :input").each(function () {
+                        if ($(this).is(":radio") || $(this).is(":checkbox")) {
+                            $(this).prop("checked", false);
+                        } else {
+                            $(this).val("");
+                        }
+                    });
+                    renderFamilyMemberTable();
+                }
+
+                function renderFamilyMemberTable() {
+                    let familyMembers = store.get("family_members") || [];
+                    let $tableBody = $("#table-family-member tbody");
+                    $tableBody.empty();
+                    familyMembers.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.relationship}</td>
+                                <td>${member.name}</td>
+                                <td>${member.sex_id}</td>
+                                <td>${member.birth_place}</td>
+                                <td>${member.birth_date}</td>
+                                <td>${member.education}</td>
+                                <td>${member.job}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-family-member").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveFamilyMembers();
+                    }
+                });
+                // family member end
+
+                // organization start
+                function saveOrganizationExperiences() {
+                    let organizationExperiences = store.get("organization_experiences") || []; // Default to empty array if not set
+                    let name = $("#organization-name-experience-candidates").val();
+                    let position = $("#position-organization-experience-candidates").val();
+                    let year = $("#year-organization-experience-candidates").val();
+                    let description = $("#description-organization-experience-candidates").val();
+
+                    if (name && position && year && description) {
+                        organizationExperiences.push({
+                            name: name,
+                            position: position,
+                            year: year,
+                            description: description,
+                        });
+                    }
+
+                    store.set("organization_experiences", organizationExperiences);
+                    $("#organization_experiences :input").prop("required", false);
+                    $("#organization_experiences :input").val("");
+                    renderOrganizationExperiences();
+                }
+
+                function renderOrganizationExperiences() {
+                    let organizationExperiences = store.get("organization_experiences") || [];
+                    let $tableBody = $("#table-organization-experience tbody");
+                    $tableBody.empty();
+                    organizationExperiences.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.name}</td>
+                                <td>${member.position}</td>
+                                <td>${member.year}</td>
+                                <td>${member.description}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-organization-experience").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveOrganizationExperiences();
+                    }
+                });
+                // organization end
+
+                // expertise certification start
+                function saveExpertiseCertification() {
+                    let expertiseCertification = store.get("expertise_certification") || []; // Default to empty array if not set
+                    let type = $("#type-of-expertise-expertise-certification-candidates").val();
+                    let level = $("#qualification-type-expertise-certification-candidates").val();
+                    let given = $("#given-by-expertise-certification-candidates").val();
+                    let year = $("#year-expertise-certification-candidates").val();
+                    let description = $("#description-expertise-certification-candidates").val();
+
+                    if (type && level && given && year && description) {
+                        expertiseCertification.push({
+                            type: type,
+                            level: level,
+                            given: given,
+                            year: year,
+                            description: description,
+                        });
+                    }
+
+                    store.set("expertise_certification", expertiseCertification);
+                    $("#expertise_certification :input").prop("required", false);
+                    $("#expertise_certification :input").val("");
+                    renderExpertiseCertification();
+                }
+
+                function renderExpertiseCertification() {
+                    let expertiseCertification = store.get("expertise_certification") || [];
+                    let $tableBody = $("#table-expertise-certification tbody");
+                    $tableBody.empty();
+                    expertiseCertification.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.type}</td>
+                                <td>${member.level}</td>
+                                <td>${member.given}</td>
+                                <td>${member.year}</td>
+                                <td>${member.description}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-expertise-certification").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveExpertiseCertification();
+                    }
+                });
+                // expertise certification end
+
+                // courses training start
+                function saveCoursesTraining() {
+                    let coursesTraining = store.get("courses_training") || []; // Default to empty array if not set
+                    let type = $("#type-of-training-courses-training-candidates").val();
+                    let level = $("#level-courses-training-candidates").val();
+                    let organized = $("#organized-by-courses-training-candidates").val();
+                    let year = $("#year-courses-training-candidates").val();
+                    let description = $("#description-courses-training-candidates").val();
+
+                    if (type && level && organized && year && description) {
+                        coursesTraining.push({
+                            type: type,
+                            level: level,
+                            organized: organized,
+                            year: year,
+                            description: description,
+                        });
+                    }
+
+                    store.set("courses_training", coursesTraining);
+                    $("#courses_training :input").prop("required", false);
+                    $("#courses_training :input").val("");
+                    renderCoursesTraining();
+                }
+
+                function renderCoursesTraining() {
+                    let coursesTraining = store.get("courses_training") || [];
+                    let $tableBody = $("#table-courses-training tbody");
+                    $tableBody.empty();
+                    coursesTraining.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.type}</td>
+                                <td>${member.level}</td>
+                                <td>${member.organized}</td>
+                                <td>${member.year}</td>
+                                <td>${member.description}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-courses-training").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveCoursesTraining();
+                    }
+                });
+                // courses training end
+
+                // foreign language start
+                function saveForeignLanguage() {
+                    let foreignLanguages = store.get("foreign_languages") || []; // Default to empty array if not set
+                    let language = $("#language").val();
+                    let speaking_ability_level = $("#speaking-ability-level").val();
+                    let writing_ability_level = $("#writing-ability-level").val();
+
+                    if (language && speaking_ability_level && writing_ability_level) {
+                        foreignLanguages.push({
+                            language: language,
+                            speaking_ability_level: speaking_ability_level,
+                            writing_ability_level: writing_ability_level,
+                        });
+                    }
+
+                    store.set("foreign_languages", foreignLanguages);
+                    $("#foreign_languages :input").prop("required", false);
+                    $("#foreign_languages :input").val("");
+                    renderForeignLanguage();
+                }
+
+                function renderForeignLanguage() {
+                    let foreignLanguages = store.get("foreign_languages") || [];
+                    let $tableBody = $("#table-foreign-language tbody");
+                    $tableBody.empty();
+                    foreignLanguages.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.language}</td>
+                                <td>${member.speaking_ability_level}</td>
+                                <td>${member.writing_ability_level}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-foreign-language").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveForeignLanguage();
+                    }
+                });
+                // foreign language end
+
+                // work experience start
+                function saveWorkExperience() {
+                    let workExperience = store.get("work_experience") || []; // Default to empty array if not set
+                    let company = $("#company-work-experience").val();
+                    let position = $("#position-work-experience").val();
+                    let from_date = $("#from-date-work-experience").val();
+                    let to_date = $("#to-date-work-experience").val();
+                    let location = $("#location-work-experience").val();
+                    let take_home_pay = $("#take-home-pay-work-experience").val();
+                    let job_description = $("#job-description-work-experience").val();
+                    let reason = $("#reason-for-resignation-work-experience").val();
+
+                    if (language && position && from_date && to_date && location && take_home_pay && job_description && reason) {
+                        workExperience.push({
+                            company: company,
+                            position: position,
+                            from_date: from_date,
+                            to_date: to_date,
+                            location: location,
+                            take_home_pay: take_home_pay,
+                            job_description: job_description,
+                            reason: reason,
+                        });
+                    }
+
+                    store.set("work_experience", workExperience);
+                    $("#work_experience :input").prop("required", false);
+                    $("#work_experience :input").val("");
+                    renderWorkExperience();
+                }
+
+                function renderWorkExperience() {
+                    let workExperience = store.get("work_experience") || [];
+                    let $tableBody = $("#table-work-experience tbody");
+                    $tableBody.empty();
+                    workExperience.forEach(function (member) {
+                        let html = `
+                            <tr>
+                                <td>${member.company}</td>
+                                <td>${member.position}</td>
+                                <td>${member.from_date}</td>
+                                <td>${member.to_date}</td>
+                                <td>${member.location}</td>
+                                <td>${member.take_home_pay}</td>
+                                <td>${member.job_description}</td>
+                                <td>${member.reason}</td>
+                            </tr>
+                        `;
+                        $tableBody.append(html);
+                    });
+                }
+
+                $("#btn-save-work-experience").click(function () {
+                    if (validateStep(currentStep)) {
+                        saveWorkExperience();
+                    }
+                });
+                // work experience end
+
+                // render table
+                renderFamilyInformationTable();
+                renderFamilyMemberTable();
+                renderOrganizationExperiences();
+                renderExpertiseCertification();
+                renderCoursesTraining();
+                renderForeignLanguage();
+                renderWorkExperience();
+
                 $nextButton.click(function () {
-                    if (validateStep(currentStep) && currentStep < steps.length - 1) {
+                    const currentFieldset = steps.eq(currentStep);
+                    const fieldsetID = currentFieldset.attr("id");
+                    if (store.get(fieldsetID) !== undefined) {
                         currentStep++;
+                        loadStepData(currentStep);
                         showStep(currentStep);
+                    } else {
+                        if (validateStep(currentStep) && currentStep < steps.length - 1) {
+                            saveStepData(currentStep);
+                            currentStep++;
+                            loadStepData(currentStep);
+                            showStep(currentStep);
+                        }
                     }
                 });
 
                 $prevButton.click(function () {
                     if (currentStep > 0) {
                         currentStep--;
+                        loadStepData(currentStep);
                         showStep(currentStep);
                     }
                 });
 
                 $("#multi-step-form").submit(function (e) {
+                    console.info("clicked");
                     if (!validateStep(currentStep)) {
                         e.preventDefault();
-                    } else if (grecaptcha.getResponse() === "") {
-                        e.preventDefault();
-                        alert("Please complete the CAPTCHA.");
                     } else {
+                        saveStepData(currentStep);
+                        store.clearAll();
                         alert("Form submitted!");
                     }
                 });
 
                 showStep(currentStep);
+                loadStepData(currentStep);
 
                 function onSubmit(token) {
-                    document.getElementById("demo-form").submit();
+                    document.getElementById("multi-step-form").submit();
+                }
+
+                function getJobVacancy() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#job_vacancy_id").empty();
+                            $("#job_vacancy_id").append('<option value="" selected>Select Lowongan Kerja</option>');
+                            $.each(response, function (key, value) {
+                                $("#job_vacancy_id").append('<option value="' + value.id + '">' + value.title + "</option>");
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
+                }
+
+                function getMaritalStatus() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies/marital-statuses",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#marital-status-id-candidate").empty();
+                            $("#marital-status-id-candidate").append('<option value="" selected>Select Status</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#marital-status-id-candidate").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
+                }
+
+                function getReligions() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies/religions",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#religion-id-candidate").empty();
+                            $("#religion-id-candidate").append('<option value="" selected>Select Religion</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#religion-id-candidate").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
+                }
+
+                function getEthnics() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies/ethnics",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#ethnic-id-candidate").empty();
+                            $("#ethnic-id-candidate").append('<option value="" selected>Select Suku</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#ethnic-id-candidate").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
+                }
+
+                function getRelationship() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies/relationships",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#relationship-id-emergency-contact-candidates").empty();
+                            $("#relationship-id-emergency-contact-candidates").append('<option value="" selected>Select Hubungan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#relationship-id-emergency-contact-candidates").append(
+                                    '<option value="' + value.id + '">' + value.name + "</option>"
+                                );
+                            });
+
+                            $("#relationship-id-family-information-candidates").empty();
+                            $("#relationship-id-family-information-candidates").append('<option value="" selected>Select Hubungan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#relationship-id-family-information-candidates").append(
+                                    '<option value="' + value.id + '">' + value.name + "</option>"
+                                );
+                            });
+
+                            $("#relationship-id-family-member-candidates").empty();
+                            $("#relationship-id-family-member-candidates").append('<option value="" selected>Select Hubungan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#relationship-id-family-member-candidates").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
+                }
+
+                function getEducations() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies/educations",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#education-id-family-information-candidates").empty();
+                            $("#education-id-family-information-candidates").append('<option value="" selected>Select Pendidikan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#education-id-family-information-candidates").append(
+                                    '<option value="' + value.id + '">' + value.name + "</option>"
+                                );
+                            });
+
+                            $("#education-id-family-member-candidates").empty();
+                            $("#education-id-family-member-candidates").append('<option value="" selected>Select Pendidikan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#education-id-family-member-candidates").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+
+                            $("#education-id-education-background-candidates").empty();
+                            $("#education-id-education-background-candidates").append('<option value="" selected>Select Pendidikan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#education-id-education-background-candidates").append(
+                                    '<option value="' + value.id + '">' + value.name + "</option>"
+                                );
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
+                }
+
+                function getJobs() {
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/public/job-vacancies/jobs",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (response) {
+                            $("#job-id-family-information-candidates").empty();
+                            $("#job-id-family-information-candidates").append('<option value="" selected>Select Pekerjaan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#job-id-family-information-candidates").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+
+                            $("#job-id-family-member-candidates").empty();
+                            $("#job-id-family-member-candidates").append('<option value="" selected>Select Pekerjaan</option>');
+                            $.each(response.data, function (key, value) {
+                                $("#job-id-family-member-candidates").append('<option value="' + value.id + '">' + value.name + "</option>");
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                        },
+                    });
                 }
             });
         </script>
