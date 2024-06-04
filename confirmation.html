@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Confirmation -->
+        <fieldset>
+            <div class="container">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h3 class="fs-4">Konfirmasi Data Anda Sebelum Melakukan Submit!</h3>
+                            <h4 class="fs-5 fst-italic">(Please review your data before submitting!)</h4>
+                        </div>
+                        <div class="row">
+                            <!-- Data Pribadi / (Personal Information) -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h4 class="fs-5">
+                                            Jabatan Yang Dilamar:
+                                            <span id="first-name-candidate-preview">Job Vacancy Satu</span>
+                                        </h4>
+                                        <h4 class="fs-5">
+                                            Tanggal:
+                                            <span id="middle-name-candidate-preview">01 January 2024</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Pribadi / (Personal Information) -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Data Pribadi</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Personal Information)</h4>
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <ul>
+                                                    <li>
+                                                        First Name:
+                                                        <span id="first-name-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Middle Name:
+                                                        <span id="middle-name-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Last Name:
+                                                        <span id="last-name-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Jenis Kelamin:
+                                                        <span id="sex-id-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        No. KTP:
+                                                        <span id="legal-identity-number-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        No. NPWP:
+                                                        <span id="tax-identify-number-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Alamat KTP:
+                                                        <span id="legal-address-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Alamat Saat Ini:
+                                                        <span id="current-address-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        No. Handphone:
+                                                        <span id="phone-number-candidate-preview"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <ul>
+                                                    <li>
+                                                        No. Telepon Rumah:
+                                                        <span id="home-phone-number-candidate-preview"></span>
+                                                    </li>
+                                                    <li>Email: <span id="email-candidate-preview"></span></li>
+                                                    <li>
+                                                        Tempat Lahir:
+                                                        <span id="birth-place-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Tanggal Lahir:
+                                                        <span id="birth-date-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Status Pernikahan:
+                                                        <span id="marital-status-id-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Agama:
+                                                        <span id="religion-id-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Suku Bangsa:
+                                                        <span id="ethnic-id-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Berat Badan:
+                                                        <span id="weight-candidate-preview"></span>
+                                                    </li>
+                                                    <li>
+                                                        Tinggi Badan:
+                                                        <span id="height-candidate-preview"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Keluarga Yang Bisa Dihubungi Dalam Keadaan Darurat</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Family Member / Who can be Contacted In an Emergency)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-emergency-contact-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Hubungan</th>
+                                                        <th>Nama</th>
+                                                        <th>Jenis Kelamin</th>
+                                                        <th>No. Handphone</th>
+                                                        <th>Alamat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Keluarga / (Family Information) -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Data Keluarga</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Family Information)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-family-information-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Hubungan</th>
+                                                        <th>Nama</th>
+                                                        <th>Jenis Kelamin</th>
+                                                        <th>Tempat Lahir</th>
+                                                        <th>Tanggal Lahir</th>
+                                                        <th>Pendidikan</th>
+                                                        <th>Pekerjaan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Identitas Orangtua & Saudara / Family Member -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Identitas Orangtua & Saudara</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Parents and Brothers/Sisters Information)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-family-member-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Hubungan</th>
+                                                        <th>Nama</th>
+                                                        <th>Jenis Kelamin</th>
+                                                        <th>Tempat Lahir</th>
+                                                        <th>Tanggal Lahir</th>
+                                                        <th>Pendidikan</th>
+                                                        <th>Pekerjaan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Riwayat Pendidikan -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Data Riwayat Pendidikan</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Educational Background)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-education-background-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Jenjang</th>
+                                                        <th>Nama Institusi</th>
+                                                        <th>Jurusan</th>
+                                                        <th>Tahun Mulai</th>
+                                                        <th>Tahun Selesai</th>
+                                                        <th>Nilai Akhir / IPK</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Pengalaman Organisasi -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Data Pengalaman Organisasi</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Organization Experience)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-organization-experience-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Nama Organisasi</th>
+                                                        <th>Jabatan</th>
+                                                        <th>Tahun</th>
+                                                        <th>Keterangan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sertifikasi Keahlian/Profesi -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Sertifikasi Keahlian/Profesi</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Expertise/Profession Certification)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-expertise-certification-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Jenis Keahlian</th>
+                                                        <th>Tipe Kualifikasi</th>
+                                                        <th>Pemberi Sertifikasi</th>
+                                                        <th>Tahun</th>
+                                                        <th>Keterangan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Kursus/Pelatihan -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Kursus/Pelatihan</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Courses/Training)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-courses-training-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Jenis</th>
+                                                        <th>Level</th>
+                                                        <th>Penyelenggara</th>
+                                                        <th>Tahun</th>
+                                                        <th>Keterangan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Kursus/Pelatihan -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Bahasa Asing</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Foreign Language)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-foreign-language-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Bahasa</th>
+                                                        <th>Kemampuan Berbicara</th>
+                                                        <th>Kemampuan Menulis</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pengalaman Kerja -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Pengalaman Kerja</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Work Experience)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-organization-experience-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Nama Perusahaan</th>
+                                                        <th>Jabatan</th>
+                                                        <th>Dari</th>
+                                                        <th>Sampai</th>
+                                                        <th>Tempat</th>
+                                                        <th>Gaji terakhir</th>
+                                                        <th>Uraian Pekerjaan</th>
+                                                        <th>Alasan Keluar</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Saudara/Teman/Kenalan yang Bekerja Pada Rumah Sakit YARSI -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Saudara/Teman/Kenalan yang Bekerja Pada Rumah Sakit YARSI</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Relatives/Friends/Acquaintances Who Work At Rumah Sakit YARSI)</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="table-hospital-connection-candidates">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Hubungan</th>
+                                                        <th>Nama</th>
+                                                        <th>Bagian</th>
+                                                        <th>Jabatan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Perspektif Diri -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Data Perspektif Diri</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Self Perspective)</h4>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul>
+                                                    <li>
+                                                        1. Ceritakan dengan singkat mengenai diri Anda menurut pandangan Anda pribadi?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        2. Sebutkan minimal 3 (tiga) kelebihan yang Anda miliki?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        3. Sebutkan minimal 3 (tiga) kekurangan yang Anda miliki?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        4. Sebutkan minimal 3 (tiga) keberhasilan yang pernah Anda raih dalam hidup?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        5. Sebutkan kegagalan-kegagalan yang pernah Anda alami dalam hidup?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        6. Berikan gambaran singkat mengenai karir / pekerjaan yang Anda inginkan?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        7. Sebutkan harapan-harapan Anda di masa yang akan datang?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Data Tambahan -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Data Tambahan</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Additonal Information)</h4>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul>
+                                                    <li>
+                                                        1. Apakah Anda mengalami gangguan fisik (seperti; penglihatan, pendengaran, dll)? Jika ada,
+                                                        gambarkan kondisi Anda saat ini dan sebutkan jenis pengobatan yang telah Anda lakukan?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        2. Apakah Anda pernah mengalami atau memiliki penyakit berat (seperti; jantung, diabetes,
+                                                        dll)? Jika iya, sebutkan?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        3. Pernahkah Anda dirawat di Rumah Sakit? Jika pernah, sebutkan kapan waktunya serta apa
+                                                        penyebabnya?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        4. Kapan terakhir medical check up?, Apa Hasilnya?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Komitmen Dan Motivasi -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Komitmen Dan Motivasi</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Commitment and Motivation)</h4>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul>
+                                                    <li>
+                                                        A. Darimanakah anda mendapatkan informasi lowongan kerja Rumah Sakit YARSI?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        B. Mengapa anda ingin bekerja di Rumah Sakit YARSI?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        C. Apakah anda yakin dengan kemampuan anda sekarang dapat diterima bekerja di Rumah Sakit
+                                                        YARSI?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        D. Jika anda diterima, posisi jabatan apa yang anda inginkan?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        E. Apa yang anda lakukan, jika anda ditempatkan di jabatani yang bukan anda inginkan?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        F. Kesulitan apa yang anda alami pada pekerjaan sebelumnya?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        G. Mengapa anda mengundurkan diri dari pekerjaan sebelumnya?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Penanganan Stress -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Penangan Stress</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Stress Handling)</h4>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul>
+                                                    <li>
+                                                        A. Apa yang anda lakukan jika terjadi konflik dengan rekan kerja anda?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        B. Bagaimana Anda mengelola atau menangani stres di tempat kerja?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        C. Apakah Anda bersedia untuk bekerja lembur?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        D. Apa yang akan Anda lakukan jika Anda mendapatkan keluhan dari pasien atau keluarga?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Lain-lain -->
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="fs-4">Lain-lain</h3>
+                                        <h4 class="fs-5 mb-4 fst-italic">(Others)</h4>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul>
+                                                    <li>
+                                                        A. Gaji yang diharapkan?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                    <li>
+                                                        B. Tunjangan / Fasilitas?
+                                                        <p id="first-name-candidate-preview"></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </body>
+</html>
